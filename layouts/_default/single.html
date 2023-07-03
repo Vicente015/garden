@@ -12,18 +12,18 @@
       <h1>
           {{ range (.GetTerms "tags")  }}
               {{ if eq .LinkTitle "Seed" }}
-                <img class="tag-pixel-icon" src="/seed-icon.png" alt="Seed icon">
+                <img class="tag-pixel-icon" src="seed-icon.png" alt="Seed icon">
               {{ else if eq .LinkTitle "Sapling" }}
-                <img class="tag-pixel-icon" src="/sapling-icon.png" alt="Sapling icon">
+                <img class="tag-pixel-icon" src="sapling-icon.png" alt="Sapling icon">
               {{ else if eq .LinkTitle "Fruit" }}
-                <img class="tag-pixel-icon" src="/fruit-icon.png" alt="Fruit icon">
+                <img class="tag-pixel-icon" src="fruit-icon.png" alt="Fruit icon">
               {{ end }}
           {{ end }}
           {{ .Title }}
         </h1>
       {{end}}
       <p class="meta delay t-3 timer-container">
-        <img class="tag-pixel-icon timer" src="/timer.png" alt="Clock icon">
+        <img class="tag-pixel-icon timer" src="timer.png" alt="Clock icon">
         {{ i18n "last_updated" }} {{ partial "date-fmt.html" .}}
           {{ partial "github.html" . }}
       </p>
