@@ -1,0 +1,10 @@
+.DS_Store
+public
+resources
+.idea
+content/.obsidian
+content/private
+assets/indices/linkIndex.json
+assets/indices/contentIndex.json
+.st*
+static/linkmap

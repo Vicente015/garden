@@ -1,0 +1,27 @@
+name: Vicente015
+enableToc: false
+openToc: false
+enableLinkPreview: true
+enableLatex: true
+enableCodeBlockTitle: true
+enableCodeBlockCopy: true
+enableCallouts: true
+enableSPA: true
+enableAnnotation: true
+enableFooter: true
+enableContextualBacklinks: true
+enableRecentNotes: true
+enableGitHubEdit: false
+enableMermaid: false
+GitHubLink: https://github.com/jackyzha0/quartz/tree/hugo/content
+enableSemanticSearch: false
+operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
+description:
+  Welcome to my digital garden
+page_title:
+  "vicente015.dev"
+links:
+  - link_name: Twitter
+    link: https://twitter.com/vicente015_
+  - link_name: Github
+    link: https://github.com/Vicente015

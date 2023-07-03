@@ -1,0 +1,219 @@
+// Add your own CSS here!
+
+:root {
+  // Color fondo
+  --light: var(--p100);
+  // Títulos
+  --dark: var(--p800);
+  // Enlaces, tags
+  --secondary: var(--p700);
+  // Enlaces visitados
+  --visited: #4a575e;
+  // Hover enlaces
+  --tertiary: var(--p600);
+  // Nodo principal vista
+  --primary: lightgreen;
+  // Color texto
+  --gray: var(--p800);
+  // Fondo barra búsqueda
+  --lightgray: rgba(0, 0, 0, 0.1);
+  // Outline tarjetas / divisores
+  --outlinegray: var(--p400);
+  // Idk
+  --highlighted: #574010;
+
+  --p50: #F1F4F1;
+  --p100: #E2E9E3;
+  --p200: #C9D4CA;
+  --p300: #ACBEAD;
+  --p400: #93AA94;
+  --p500: #769378;
+  --p600: #5E7860;
+  --p700: #465847;
+  --p800: hsl(125, 17%, 15%);
+  --p900: #161D17;
+  --p950: #0B0E0B;
+}
+
+[saved-theme="dark"] {
+  // Color fondo
+  --light: var(--p800) !important;
+  // Títulos
+  --dark: var(--p50) !important;
+  // Enlaces, tags
+  --secondary: var(--p300) !important;
+  // Enlaces visitados
+  --visited: #4a575e !important;
+  // Hover enlaces
+  --tertiary: var(--p100) !important;
+  // Nodo principal vista
+  --primary: lightgreen  !important;
+  // Color texto
+  --gray: var(--p50) !important;
+  // Fondo barra búsqueda
+  --lightgray: rgba(0, 0, 0, 0.1) !important;
+  // Outline tarjetas / divisores
+  --outlinegray: var(--p500) !important;
+  // Idk
+  --highlighted: #574010;
+}
+
+h2,h3,h4 {
+  width: max-content;
+}
+
+article {
+  & .tag-pixel-icon {
+    cursor: grabbing;
+    display: inline;
+    text-align: left;
+    margin-left: -10px !important;
+    margin: 0;
+    padding: 0;
+    width: 40px !important;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    filter:
+      drop-shadow(1px 1px 0 black)
+      drop-shadow(1px -1px 0 black)
+      drop-shadow(-1px 1px 0 black)
+      drop-shadow(-1px -1px 0 black)
+  }
+
+  .timer-container {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  & .timer {
+    width: 18px !important;
+    height: 18px !important;
+    padding: 0px 8px 0px 10px;
+  }
+
+  & .tag-pixel-icon:hover {
+    animation: horizontal-shaking 0.4s infinite;
+  }
+}
+
+article blockquote {
+  border: 0;
+}
+
+article p a.internal-link {
+  background: none;
+}
+
+.meta {
+  font-family: monospace;
+  font-size: 1.2em;
+  flex-basis: 6.1em !important;
+}
+
+article .meta {
+  display: inline-block;
+  width: max-content;
+}
+
+article .desc {
+  & h3 {
+    max-width: 25em;
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  & a.internal-link div.popover {
+    overflow: hidden;
+    white-space: initial;
+
+    & h3 {
+      white-space: initial;
+    }
+
+    & p {
+      line-height: 1.3em;
+      font-weight: 100;
+    }
+  }
+}
+
+
+img {
+  margin: 1em auto;
+  display: block;
+}
+
+.broken {
+  text-decoration: dashed line-through !important;
+}
+
+[show-animation="true"] .delay {
+  animation: fadeIn ease 0.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+  &.t-1 {
+    animation-delay: 0.2s;
+  }
+
+  &.t-2 {
+    animation-delay: 0.4s;
+  }
+
+  &.t-3 {
+    animation-delay: 0.6s;
+  }
+
+  &.t-4 {
+    animation-delay: 0.8s;
+  }
+
+  &.t-5 {
+    animation-delay: 1s;
+  }
+
+  @for $j from 1 through 5 {
+  @for $i from 1 through 10 {
+  &.stagger:nth-last-of-type(#{$j}) > *:nth-child(#{$i}) {
+    animation: fadeIn ease 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: #{$i * .08 + 1}s;
+    z-index: #{-$i + 10 * ($j+1)};
+    position: relative;
+  }
+  }
+  }
+}
+
+@keyframes horizontal-shaking {
+ 0% { transform: translateX(0) }
+ 25% { transform: translateX(3px) }
+ 50% { transform: translateX(-3px) }
+ 75% { transform: translateX(3px) }
+ 100% { transform: translateX(0) }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInMeta {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: .7;
+  }
+}

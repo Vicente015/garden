@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Running exiftool to remove EXIF data from public images..."
+exiftool -all:all= -r -overwrite_original ../content/thoughts/images/

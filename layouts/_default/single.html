@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+{{ partial "head.html" . }}
+
+<body>
+{{partial "search.html" .}}
+<div class="singlePage">
+    <!-- Begin actual content -->
+    {{partial "header.html" .}}
+    <article class="delay t-2">
+      {{if .Title}}
+      <h1>
+          {{ range (.GetTerms "tags")  }}
+              {{ if eq .LinkTitle "Seed" }}
+                <img class="tag-pixel-icon" src="/seed-icon.png" alt="Seed icon">
+              {{ else if eq .LinkTitle "Sapling" }}
+                <img class="tag-pixel-icon" src="/sapling-icon.png" alt="Sapling icon">
+              {{ else if eq .LinkTitle "Fruit" }}
+                <img class="tag-pixel-icon" src="/fruit-icon.png" alt="Fruit icon">
+              {{ end }}
+          {{ end }}
+          {{ .Title }}
+        </h1>
+      {{end}}
+      <p class="meta delay t-3 timer-container">
+        <img class="tag-pixel-icon timer" src="/timer.png" alt="Clock icon">
+        {{ i18n "last_updated" }} {{ partial "date-fmt.html" .}}
+          {{ partial "github.html" . }}
+      </p>
+      <ul class="tags delay t-4">
+          {{ range (.GetTerms "tags") }}
+          <li><a href="{{ .Permalink }}">
+          {{if (eq $.Site.Language.Lang "en")}}
+            {{ .LinkTitle | humanize }}
+          {{else}}
+            {{ .LinkTitle | humanize }}
+          {{end}}
+            </a>
+           </li>
+          {{ end }}
+      </ul>
+      <hr>
+      {{partial "toc.html" .}}
+      <div contenteditable="false" class="delay stagger">
+        {{partial "textprocessing.html" . }}
+      </div>
+    </article>
+    {{partial "footer.html" .}}
+</div>
+</body>
+</html>

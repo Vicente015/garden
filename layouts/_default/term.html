@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+{{ partial "head.html" . }}
+
+<body>
+{{partial "search.html" .}}
+<div class="singlePage">
+    <!-- Begin actual content -->
+    {{partial "header.html" .}}
+    <article>
+        <h1>
+            {{ if eq .Title "Seed" }}
+                <img class="tag-pixel-icon" src="/seed-icon.png" alt="Seed icon">
+            {{ else if eq .Title "Sapling" }}
+                <img class="tag-pixel-icon" src="/sapling-icon.png" alt="Sapling icon">
+            {{ else if eq .Title "Fruit" }}
+                <img class="tag-pixel-icon" src="/fruit-icon.png" alt="Fruit icon">
+            {{ end }}
+            {{ i18n "tag" }}: {{ .Title }}
+        </h1>
+        {{with .Params.description}}
+            <p>{{.}}</p>
+            {{end}}
+        <a href="/tags">Explorar todas las etiquetas →</a>
+        {{partial "page-list.html" .Paginator.Pages}}
+        {{ template "_internal/pagination.html" . }}
+    </article>
+    {{partial "contact.html" .}}
+</div>
+</body>
+</html>
