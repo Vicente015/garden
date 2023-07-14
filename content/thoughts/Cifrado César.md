@@ -3,6 +3,7 @@ title: "Cifrado César"
 date: 2023-07-05
 tags:
 - seed
+- CS50
 ---
 
 El cifrado césar es una de las técnicas de [[thoughts/Encriptación|encriptación]] más simples y usadas.

@@ -58,6 +58,17 @@
   --highlighted: #574010;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3em;
+  flex-wrap: wrap;
+
+  & h1 {
+    font-size: 1.6em;
+  }
+}
+
 h2,h3,h4 {
   width: max-content;
 }
@@ -82,7 +93,7 @@ article {
       drop-shadow(-1px -1px 0 black)
   }
 
-  .timer-container {
+  & .timer-container {
     display: flex !important;
     flex-direction: row;
     align-items: center;
@@ -96,6 +107,10 @@ article {
 
   & .tag-pixel-icon:hover {
     animation: horizontal-shaking 0.4s infinite;
+  }
+
+  & .rough-annotation {
+    z-index: -1;
   }
 }
 
@@ -111,20 +126,16 @@ article p a.internal-link {
   font-family: monospace;
   font-size: 1.2em;
   flex-basis: 6.1em !important;
-}
 
-article .meta {
-  display: inline-block;
-  width: max-content;
+  time {
+    overflow-wrap: normal;
+  }
 }
 
 article .desc {
   & h3 {
-    max-width: 25em;
-    width: fit-content;
+    width: 100%;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 
   & a.internal-link div.popover {
