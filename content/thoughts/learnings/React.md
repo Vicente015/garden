@@ -7,11 +7,10 @@ tags:
 - learnings
 ---
 
-# React
 React es una de las bibliotecas más importantes para construir en la web, se usa principalmente para construir interfaces de usuario.
 React __no es un framework__, se catalogaría mejor como una librería. React además puede ser usado en más escenarios aparte de la web.
 
-El objetivo principal de React es minimizar los errores que ocurren cuando los desarrolladores construyen interfaces de usuario. Esto lo hace mediante el uso de componentes, piezas de código lógicas y auto-contenidas que describen una parte de la UI. Estos componentes se pueden juntar para crear una interfaz de usuario completa, y React abastrae la mayor parte del trabajo.
+El objetivo principal de React es minimizar los errores que ocurren cuando los desarrolladores construyen interfaces de usuario. Esto lo hace mediante el uso de componentes, piezas de código lógicas y auto-contenidas que describen una parte de la UI. Estos componentes se pueden juntar para crear una interfaz de usuario completa, y React abstrae la mayor parte del trabajo.
 
 ## Abstracción
 La abstracción es un método que pretender simplificar un concepto para no tener que entender cómo funcionan los sistemas complejos por debajo.
