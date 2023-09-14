@@ -1,0 +1,480 @@
+<!doctype html><html lang=es><head><meta charset=utf-8><meta name=description content="React React es una de las bibliotecas más importantes para construir en la web, se usa principalmente para construir interfaces de usuario."><title>React</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://vicente015.dev//icon.png><link href=https://vicente015.dev/styles.ddfd061fbba53668d68eb0d01a777ddf.min.css rel=stylesheet><link href=https://vicente015.dev/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://vicente015.dev/js/darkmode.cb6b8e3c9d3cbe015343bc63941ffcad.min.js></script>
+<script src=https://vicente015.dev/js/util.6f22941e242efae60fd84e7c32e874fa.min.js></script>
+<link rel=preload href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css as=style onload='this.onload=null,this.rel="stylesheet"' integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script async type=module src=https://unpkg.com/rough-notation?module></script>
+<script async src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script async src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script async src=https://vicente015.dev/js/popover.f03552ccb84d99ca615d1cfb9abde59e.min.js></script>
+<script defer src=https://vicente015.dev/js/code-title.ce4a43f09239a9efb48fee342e8ef2df.min.js></script>
+<script defer src=https://vicente015.dev/js/clipboard.2913da76d3cb21c5deaa4bae7da38c9f.min.js></script>
+<script defer src=https://vicente015.dev/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const isReducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches,lastVisit=localStorage.getItem("lastVisitTime"),now=Date.now();let show="true";if(lastVisit){document.documentElement.setAttribute("visited","true");const e=Math.ceil((now-parseInt(lastVisit))/(1e3*60));show=!isReducedMotion&&e>5?"true":"false"}document.documentElement.setAttribute("show-animation",show),localStorage.setItem("lastVisitTime",`${now}`);const SEARCH_ENABLED=null,LATEX_ENABLED=!0,PRODUCTION=!0,BASE_URL="https://vicente015.dev/",fetchData=Promise.all([fetch("https://vicente015.dev/indices/linkIndex.ed2ea410d00796967d836d032ff3f864.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://vicente015.dev/indices/contentIndex.adfff8f26cf088dcebb40e1244922d3b.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://vicente015.dev",!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://vicente015.dev",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:1,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:2,scale:1.2})}import("https://unpkg.com/rough-notation?module").then(s=>{const{annotate:t,annotationGroup:i}=s;function o(e,t){new IntersectionObserver((n,s)=>{n.forEach(n=>{n.intersectionRatio>0&&(t(e),s.disconnect())})}).observe(e)}const n=getComputedStyle(document.querySelector(":root")).getPropertyValue("--secondary"),e=new Map;for(let s of document.querySelectorAll("blockquote"))e.set(s,t(s,{type:"bracket",brackets:["right","left"],color:n}));for(let s of document.querySelectorAll("article h2"))e.set(s,t(s,{type:"underline",color:n}));for(let n of document.querySelectorAll("p a.broken"))e.set(n,t(n,{type:"strike-through",color:"#769378"}));for(let n of document.querySelectorAll("p a.internal-link:not(.broken):not(.footnote-ref)"))e.set(n,t(n,{type:"highlight",color:"rgba(118, 147, 120, 0.1)",multiline:!0}));e.forEach((e,t)=>{o(t,()=>e.show())})})},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{'’':"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/vicente015.dev\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Búsqueda placeholder="Buscar algo..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://vicente015.dev/js/full-text-search.e6e2e0c213187ca0c703d6e2c7a77fcd.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://vicente015.dev/>vicente015.dev</a></h1><div class=spacer></div><div id=search-icon><p>Búsqueda</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Ícono de Búsqueda</title><desc id="desc">Ícono para abrir la búsqueda</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Modo Claro</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Modo Oscuro</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article class="delay t-2"><h1><img class=tag-pixel-icon src=/seed-icon.png alt="Seed icon">
+React</h1><p class="meta delay t-3 timer-container"><img class="tag-pixel-icon timer" src=/timer.png alt="Clock icon">
+Última actualización:
+<time datetime=2023-09-14>14/09/2023</time></p><ul class="tags delay t-4"><li><a href=https://vicente015.dev/tags/seed/>Seed</a></li><li><a href=https://vicente015.dev/tags/reactCourse/>React course</a></li><li><a href=https://vicente015.dev/tags/learnings/>Learnings</a></li></ul><hr><div contenteditable=false class="delay stagger"><a href=#react><h1 id=react><span class=hanchor arialabel=Anchor># </span>React</h1></a><p>React es una de las bibliotecas más importantes para construir en la web, se usa principalmente para construir interfaces de usuario.
+React <strong>no es un framework</strong>, se catalogaría mejor como una librería. React además puede ser usado en más escenarios aparte de la web.</p><p>El objetivo principal de React es minimizar los errores que ocurren cuando los desarrolladores construyen interfaces de usuario. Esto lo hace mediante el uso de componentes, piezas de código lógicas y auto-contenidas que describen una parte de la UI. Estos componentes se pueden juntar para crear una interfaz de usuario completa, y React abastrae la mayor parte del trabajo.</p><a href=#abstracción><h2 id=abstracción><span class=hanchor arialabel=Anchor># </span>Abstracción</h2></a><p>La abstracción es un método que pretender simplificar un concepto para no tener que entender cómo funcionan los sistemas complejos por debajo.</p><a href=#contenidos><h3 id=contenidos><span class=hanchor arialabel=Anchor># </span>Contenidos</h3></a><ul><li>Resumen sobre React, entendiendo conceptos.</li><li>Introducción a JSX</li><li>Componentes, props, estados, eventos</li><li>Hooks básicos</li><li>Hooks avanzados</li><li>Muchos ejemplos prácticos</li><li>Estructuras de carpetas, enrutado</li><li>Enrutador desde cero</li><li>Contexto, estados globales</li><li>Typescript, buenas prácticas, Docker</li><li>Testing, testing end-to-end tdd, lazy loading, import dinámicos</li><li>React Query, custom hooks</li></ul><a href=#recursos><h3 id=recursos><span class=hanchor arialabel=Anchor># </span>Recursos</h3></a><ul><li>Documentación en beta,
+<a href=https://beta.es.reactjs.org/ rel=noopener>https://beta.es.reactjs.org/</a></li><li>Wiki con preguntas frecuentes,
+<a href=https://reactjs.wiki rel=noopener>https://reactjs.wiki</a></li><li>Developer tools,
+<a href=https://beta.reactjs.org/learn/react-developer-tools rel=noopener>https://beta.reactjs.org/learn/react-developer-tools</a></li></ul><a href=#qué-es><h2 id=qué-es><span class=hanchor arialabel=Anchor># </span>Qué es</h2></a><p><a href=https://beta.es.reactjs.org/ rel=noopener>React</a> es una biblioteca de JavaScript para construir interfaces de usuario independientemente de la plataforma, se puede usar para construir aplicaciones web, móviles o de terminal.</p><ul><li>Declarativo, nos permite crear estas interfaces de una manera muy sencilla.</li><li>Basado en componentes, los componentes son piezas de la interfaz que podemos reutilizar, si cambiamos algo en un componente se cambiará en todas las partes donde se use.</li><li>Universal, se puede ejecutar tanto desde el lado del cliente como desde le servidor.</li></ul><p>React es una biblioteca de código abierto creada por Meta/Facebook, se creó en 2011 como una forma de simplificar las interfaces de usuario, se creó porque era muy difícil trabajar con formularios.</p><a href=#razones-para-aprender-react><h2 id=razones-para-aprender-react><span class=hanchor arialabel=Anchor># </span>Razones para aprender React</h2></a><ol><li>Framework más demandado en mundo occidental con mucha salida laboral.</li><li>Los conceptos se pueden usar para desarrollar apps moviles con React Native.</li><li>Mantenimiento asegurado, lleva una gran empresa y comunidad detrás.</li><li>Aprender React te ayudará con el resto de frameworks, muchos de los conceptos se pueden aplicar al resto.</li><li>Futuro prometedor.</li><li>API estable, mantienen mucha de la sintaxis porque se centran en no romper algo anterior.</li><li>Comunidad gigante y activa.</li></ol><a href=#código-imperativo><h2 id=código-imperativo><span class=hanchor arialabel=Anchor># </span>Código imperativo</h2></a><p>Es una forma de escribir código declarando implicitamente cómo lo tiene que hacer.</p><p>Ejemplo de código usando librerías de React en HTML puro:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>button</span> <span class=o>=</span> <span class=nx>React</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s1>&#39;button&#39;</span><span class=p>,</span> <span class=p>{</span> <span class=s1>&#39;data-id&#39;</span><span class=o>:</span> <span class=mi>123</span> <span class=p>},</span> <span class=s1>&#39;Button 1&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>root</span><span class=p>.</span><span class=nx>render</span><span class=p>(</span><span class=nx>button</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#código-declarativo><h2 id=código-declarativo><span class=hanchor arialabel=Anchor># </span>Código declarativo</h2></a><p>Es una forma de escribir código describiendo lo que queremos que haga.</p><p>Ejemplo de código usando JSX:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=o>&lt;</span><span class=nx>React</span><span class=p>.</span><span class=nx>Fragment</span><span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>	<span class=o>&lt;</span><span class=nx>button</span> <span class=nx>data</span><span class=o>-</span><span class=nx>id</span><span class=o>=</span><span class=s2>&#34;123&#34;</span><span class=o>&gt;</span><span class=nx>Button</span> <span class=mi>1</span><span class=o>&lt;</span><span class=err>/button&gt;</span>
+</span></span><span class=line><span class=cl><span class=o>&lt;</span><span class=err>/React.Fragment&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#apuntes-01><h2 id=apuntes-01><span class=hanchor arialabel=Anchor># </span>Apuntes 01</h2></a><ul><li>En React todo es un componente.</li><li>Es como un árbol, se inicia desde la base o root.</li><li>React prevee muy bien la inyección de código malicioso.</li></ul><a href=#conceptos-react><h2 id=conceptos-react><span class=hanchor arialabel=Anchor># </span>Conceptos React</h2></a><a href=#reactivo><h3 id=reactivo><span class=hanchor arialabel=Anchor># </span>Reactivo</h3></a><p>Refleja los cambios en la interfaz volviendo a renderizar.</p><p>En React hay dos razones por las que un componente se puede volver a renderizar:</p><ul><li>Ha cambiado de estado.</li><li>Se ha cambiado al padre y por lo tanto se propaga y se vuelven a renderizar en forma de árbol hacía abajo.</li></ul><a href=#virtual-dom><h3 id=virtual-dom><span class=hanchor arialabel=Anchor># </span>Virtual DOM</h3></a><p>En lugar de volver a redenrizar toda la página lo único actualiza es aquello que cambia.</p><h2 id=jsxhttpsfacebookgithubiojsx><a href=https://facebook.github.io/jsx/ rel=noopener>JSX</a></h2><p>Es una extensión de ECMAScript que está basada en XML y nos permite programar de una forma mucho más declarativa y menos verbosa.</p><p>Es una extensión de JavaScript, escribes una especie de XHTML donde describes la interfaz que quieres crear.</p><a href=#expresiones><h3 id=expresiones><span class=hanchor arialabel=Anchor># </span>Expresiones</h3></a><p>Usando llaves permite evaluar expresiones. Permite usar variables, ejecutar una función, etc.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>name</span> <span class=o>=</span> <span class=s1>&#39;Miguel&#39;</span>
+</span></span><span class=line><span class=cl><span class=o>&lt;</span><span class=nx>h1</span><span class=o>&gt;</span><span class=nx>Hola</span><span class=p>,</span> <span class=p>{</span><span class=nx>name</span><span class=p>}</span><span class=o>&lt;</span><span class=err>/h1&gt;</span>
+</span></span><span class=line><span class=cl><span class=o>&lt;</span><span class=nx>strong</span><span class=o>&gt;</span><span class=nx>Numero</span> <span class=nx>aleatorio</span> <span class=p>{</span><span class=nb>Math</span><span class=p>.</span><span class=nx>random</span><span class=p>()}</span><span class=o>&lt;</span><span class=err>/strong&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>Recordatorio: no serviría poner un <code>if</code> u otra estructura porque no es una expresión, es una declaración.</p><a href=#transpilador><h2 id=transpilador><span class=hanchor arialabel=Anchor># </span>Transpilador</h2></a><p>Un transpilador convierte JavaScript y lo transforma.
+Cuando usamos JSX tiene que pasar por un proceso de traspilación usando dichas herramientas para poder convertirlo a HTML/JS entendible por el navegador, cuando escribimos JSX no estamos escribiendo HTML directamente, estamos escribiendo JavaScript.</p><p>Transpiladores conocidos:</p><ul><li>Babel</li><li>SWC</li></ul><a href=#código-inicial><h2 id=código-inicial><span class=hanchor arialabel=Anchor># </span>Código inicial</h2></a><p>Para poder trabajar con React en un proyecto debemos tener la siguiente estructura y declarar lo siguiente:</p><p>En el <code>index.html</code> debe crear un div principal <strong>llamado root o main</strong> y cargar el jsx principal con la etiqueta script.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl><span class=cp>&lt;!DOCTYPE html&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>html</span> <span class=na>lang</span><span class=o>=</span><span class=s>&#34;en&#34;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>head</span><span class=p>&gt;</span>...<span class=p>&lt;/</span><span class=nt>head</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;root&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>script</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;module&#34;</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;/src/main.jsx&#34;</span><span class=p>&gt;&lt;/</span><span class=nt>script</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>body</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>html</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><p>A continuación nuestro módulo principal que puede ser un archivo <code>.js</code>/<code>.jsx</code> debe crear un root y renderizarlo.</p><p>El siguiente código lo que hace es crear un root seleccionado el div root que creamos anteriormente y renderizar a partir de este incorporando nuestro componente principal <code>&lt;App /></code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>import</span> <span class=nx>React</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>ReactDOM</span> <span class=nx>from</span> <span class=s1>&#39;react-dom/client&#39;</span>
+</span></span><span class=line><span class=cl><span class=kr>import</span> <span class=nx>App</span> <span class=nx>from</span> <span class=s1>&#39;./App&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>root</span> <span class=o>=</span> <span class=nx>ReactDOM</span><span class=p>.</span><span class=nx>createRoot</span><span class=p>(</span><span class=nb>document</span><span class=p>.</span><span class=nx>getElementById</span><span class=p>(</span><span class=s1>&#39;root&#39;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=nx>root</span><span class=p>.</span><span class=nx>render</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>React.StrictMode</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>App</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>React.StrictMode</span><span class=p>&gt;,</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#componentes><h2 id=componentes><span class=hanchor arialabel=Anchor># </span>Componentes</h2></a><p>Un componente es una función que devuelve un elemento.</p><ul><li>Se escriben en <strong>PascalCase</strong> para que React diferencie y no genere conflicto con elementos HTML, se declaran de forma imperativa, su nombre no indica lo que hace <code>createButton</code> sino más bien lo que mostrar <code>Button</code>.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Button</span> <span class=o>=</span> <span class=p>({</span> <span class=nx>text</span> <span class=p>})</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>button</span><span class=p>&gt;{</span><span class=nx>text</span><span class=p>}&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>ReactDOM</span><span class=p>.</span><span class=nx>createRoot</span><span class=p>(</span><span class=nx>root</span><span class=p>).</span><span class=nx>render</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>React.Fragment</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>Button</span> <span class=na>text</span><span class=o>=</span><span class=s>&#39;Texto1&#39;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>Button</span> <span class=na>text</span><span class=o>=</span><span class=s>&#39;Texto2&#39;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;/</span><span class=nt>React.Fragment</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#keys-en-los-componentes><h3 id=keys-en-los-componentes><span class=hanchor arialabel=Anchor># </span>Keys en los componentes</h3></a><p>Cuando renderizamos componentes de una lista (ej: usuarios obtenidos de la base de datos) debemos asignarle una clave única al componente pasado como
+<a rel=noopener class="internal-link broken" data-src=#props>prop</a>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=nx>users</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span> <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Vicente&#39;</span><span class=p>,</span> <span class=nx>userName</span><span class=o>:</span> <span class=s1>&#39;vicente015&#39;</span> <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>{</span> <span class=nx>name</span><span class=o>:</span> <span class=s1>&#39;Manolo&#39;</span><span class=p>,</span> <span class=nx>userName</span><span class=o>:</span> <span class=s1>&#39;manolo12&#39;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>export</span> <span class=kd>function</span> <span class=nx>App</span> <span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>section</span> <span class=na>className</span><span class=o>=</span><span class=s>&#39;tw-follows&#39;</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>users</span><span class=p>.</span><span class=nx>map</span><span class=p>(({</span> <span class=nx>isFollowing</span><span class=p>,</span> <span class=nx>name</span><span class=p>,</span> <span class=nx>userName</span> <span class=p>})</span> <span class=p>=&gt;</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>          <span class=p>&lt;</span><span class=nt>TwitterFollowCard</span>
+</span></span><span class=line><span class=cl>            <span class=na>key</span><span class=o>=</span><span class=p>{</span><span class=nx>userName</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>            <span class=err>//</span> <span class=na>La</span> <span class=na>key</span> <span class=na>debe</span> <span class=na>ser</span> <span class=na>un</span> <span class=na>identificador</span> <span class=na>único</span> <span class=na>de</span> <span class=na>dichos</span> <span class=na>datos</span><span class=err>,</span> <span class=na>no</span> <span class=na>debe</span> <span class=na>ser</span> <span class=na>arbitrario</span> <span class=err>(</span><span class=na>ej</span> <span class=na>Math.random</span><span class=err>)</span>
+</span></span><span class=line><span class=cl>            <span class=err>//</span> <span class=na>id</span> <span class=na>db</span> <span class=p>&gt;</span> <span class=nx>username</span> <span class=o>&gt;</span> <span class=nx>index</span>
+</span></span><span class=line><span class=cl>            <span class=nx>userName</span><span class=o>=</span><span class=p>{</span><span class=nx>userName</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=o>&gt;</span>
+</span></span><span class=line><span class=cl>            <span class=p>{</span><span class=nx>name</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>          <span class=p>&lt;/</span><span class=nt>TwitterFollowCard</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=p>))</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>section</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#estilos-en-react><h2 id=estilos-en-react><span class=hanchor arialabel=Anchor># </span>Estilos en React</h2></a><ul><li>Estilos en línea</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>div</span> <span class=na>style</span><span class=o>=</span><span class=p>{{</span> <span class=nx>color</span><span class=o>:</span> <span class=nx>red</span> <span class=p>}}&gt;&lt;/</span><span class=nt>div</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>Declarar aparte e importar</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>import</span> <span class=s1>&#39;./App.css&#39;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#renderizado-condicional><h3 id=renderizado-condicional><span class=hanchor arialabel=Anchor># </span>Renderizado condicional</h3></a><p>Se renderiza una cosa u otra dependiendo de una condición.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=nx>text</span> <span class=o>=</span> <span class=nx>isFollowing</span> <span class=o>?</span> <span class=s1>&#39;Siguiendo&#39;</span> <span class=o>:</span> <span class=s1>&#39;Seguir&#39;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>span</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>	<span class=p>{</span><span class=nx>text</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#componente-vs-elemento><h2 id=componente-vs-elemento><span class=hanchor arialabel=Anchor># </span>Componente vs elemento</h2></a><p>Podríamos decir que un componente es una factoría de elementos, un componente sería una función que al ejecutarla te devuelve elementos. React renderiza elementos.</p><a href=#props><h2 id=props><span class=hanchor arialabel=Anchor># </span>Props</h2></a><p>Las &lsquo;props&rsquo; son argumentos o estados que se le pasan a los componentes, puede ser cualquier tipo de dato, incluso un elemento, deben ser inmutables, es decir que no se pueden modificar después.</p><ul><li><strong>Los props deben tratarse como inmutables</strong>, no deben ser modificados directamente, cuando tengan que ser actualizados debe hacerse una copia.</li></ul><a href=#prop-children><h3 id=prop-children><span class=hanchor arialabel=Anchor># </span>Prop <code>children</code></h3></a><p>La prop children es todo en lo que envueltas el elemento.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>Componente</span><span class=p>&gt;</span><span class=nx>Esto</span> <span class=nx>sería</span> <span class=nx>el</span> <span class=nx>children</span><span class=p>&lt;/</span><span class=nt>Componente</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=c1>// Desde el componente se obtedría así:
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kd>function</span> <span class=nx>Componente</span> <span class=p>({</span> <span class=nx>children</span> <span class=p>})</span> <span class=p>{}</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#estados><h2 id=estados><span class=hanchor arialabel=Anchor># </span>Estados</h2></a><p>Un estado es una propiedad que altera la interfaz, responde a los cambios del usuario.</p><ul><li><strong>Los estados deben tratarse como inmutables</strong>, no deben ser modificados directamente, cuando tengan que ser actualizados debe hacerse una copia.</li><li>La actualización del estado es <strong>asíncrono</strong>.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>state</span><span class=p>,</span> <span class=nx>setState</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>null</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>newState</span> <span class=o>=</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl><span class=nx>setState</span><span class=p>(</span><span class=nx>newState</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>state</span><span class=p>)</span> <span class=c1>// null
+</span></span></span><span class=line><span class=cl><span class=c1>// Devuelve aún el estado anterior porque la ejecución del cambio de estado es asíncrono por lo que no interrumpe la ejecución y la siguiente línea se ejecuta
+</span></span></span></code></pre></td></tr></table></div></div><a href=#hooks><h2 id=hooks><span class=hanchor arialabel=Anchor># </span>Hooks</h2></a><p>Los hooks permiten funcionalidades a los componentes o poder ejecutar código arbitrario cuando ocurran ciertas cosas en componentes.</p><ul><li><strong>Los hooks no pueden estar dentro de una condición, siempre en el cuerpo del componente.</strong></li></ul><a href=#usestate><h3 id=usestate><span class=hanchor arialabel=Anchor># </span><code>useState</code></h3></a><p>Permite interactuar con un estado, cada vez que cambia dicho estado React re-renderiza el componente para hacer notar los cambios.</p><a href=#useeffect><h3 id=useeffect><span class=hanchor arialabel=Anchor># </span><code>useEffect</code></h3></a><p>Nos permite ejecutar código arbitrario cuando <strong>se monta el componente</strong> en el DOM y cada vez que cambien las dependencias que nosotros le indiquemos. <strong>Cuando usas un useEffect deberías considerar hacer un custom hook.</strong></p><p>Ejemplo: para enviar datos nuevos a una DB, suscribirse a un evento</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>import</span> <span class=p>{</span> <span class=nx>useState</span><span class=p>,</span> <span class=nx>useEffect</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;react&#39;</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>Componente</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=nx>useEffect</span><span class=p>(</span><span class=nx>codeToExecute</span><span class=p>,</span> <span class=nx>listOfDependencies</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Cada vez que se renderize nuestro componente
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>console</span><span class=p>.</span><span class=nx>debug</span><span class=p>(</span><span class=s1>&#39;Código a ejecutar&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>},</span> <span class=p>[</span><span class=nx>dependencies</span><span class=p>])</span> <span class=c1>// La lista de dependencias es opcional
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Como minimo se ejecuta una vez, cuando se renderiza por primera vez
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s1>&#39;useEffect&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>},</span> <span class=p>[])</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#cleanup><h4 id=cleanup><span class=hanchor arialabel=Anchor># </span>Cleanup</h4></a><p>Cuando dentro del <code>useEffect</code> devolvemos un callback este se interpreta como un <strong>cleanup</strong>, una función que se ejecuta para limpiar el efecto (dejar de escuchar eventos, etc) cada vez que se desmonte o se actualicen dependencias.</p><p>Segundo argumento:</p><ul><li><code>[]</code> => solo se ejecuta una vez cuando se monta</li><li><code>[enabled]</code> => se ejecuta cuando cambia enabled y se monta</li><li><code>undefined</code> => se ejecuta cada vez que se renderiza</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>enabled</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nb>window</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s1>&#39;pointermove&#39;</span><span class=p>,</span> <span class=nx>handleMove</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// Limpieza del efecto
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// Se ejecuta solo cuando se desmonte el componente o actualice dependencias
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>return</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nb>window</span><span class=p>.</span><span class=nx>removeEventListener</span><span class=p>(</span><span class=s1>&#39;pointermove&#39;</span><span class=p>,</span> <span class=nx>handleMove</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span> <span class=p>[</span><span class=nx>enabled</span><span class=p>])</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#useref><h3 id=useref><span class=hanchor arialabel=Anchor># </span><code>useRef</code></h3></a><p>Te permite crear una referencia mutable que persiste durante todo el ciclo de vida del componente, muy útil para guardar un elemento que pueda mutar (contador, identificador, elemento del DOM) y cada vez que cambie no se vuelve a renderizar.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=nx>inputRef</span> <span class=o>=</span> <span class=nx>useRef</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>handleClick</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=kr>const</span> <span class=nx>value</span> <span class=o>=</span> <span class=nx>inputRef</span><span class=p>.</span><span class=nx>current</span><span class=p>.</span><span class=nx>value</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>input</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>handleClick</span><span class=p>}</span> <span class=na>ref</span><span class=o>=</span><span class=p>{</span><span class=nx>inputRef</span><span class=p>}</span> <span class=p>/&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#usememo><h3 id=usememo><span class=hanchor arialabel=Anchor># </span><code>useMemo</code></h3></a><p>Hace que un cálculo solo se haga cuando se cambien las dependencias indicadas evitando que se haga constantemente cuando se re-renderiza un componente.</p><p><strong>❗ OJO:</strong> Dentro del cuerpo de un customHook todo se vuelve a ejecutar cuando se re-renderiza.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=c1>// Solo se ejecuta si sort (booleano) o movies cambia
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>sortedMovies</span> <span class=o>=</span> <span class=nx>useMemo</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=nx>sort</span>
+</span></span><span class=line><span class=cl>		<span class=o>?</span> <span class=p>[...</span><span class=nx>movies</span><span class=p>].</span><span class=nx>sort</span><span class=p>((</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>a</span><span class=p>.</span><span class=nx>title</span><span class=p>.</span><span class=nx>localeCompare</span><span class=p>(</span><span class=nx>b</span><span class=p>.</span><span class=nx>title</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>		<span class=o>:</span> <span class=nx>movies</span>
+</span></span><span class=line><span class=cl><span class=p>},</span> <span class=p>[</span><span class=nx>sort</span><span class=p>,</span> <span class=nx>movies</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Se ejecuta solo la primera vez
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>getMovies</span> <span class=o>=</span> <span class=nx>useMemo</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=kr>async</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>		<span class=kd>let</span> <span class=nx>results</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>getResults</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=nx>results</span>
+</span></span><span class=line><span class=cl>	<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>},</span> <span class=p>[])</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#usecallback><h3 id=usecallback><span class=hanchor arialabel=Anchor># </span><code>useCallback</code></h3></a><p>Una forma más sencilla, similar al <code>useMemo</code> pero solo para las funciones, por debajo usa el <code>useMemo</code>. Se debe usar en vez del <code>useMemo</code> si queremos optimizar una función.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=nx>getMovies</span> <span class=o>=</span> <span class=nx>useCallback</span><span class=p>(</span><span class=kr>async</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=kd>let</span> <span class=nx>results</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>getResults</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=nx>results</span>
+</span></span><span class=line><span class=cl><span class=p>},</span> <span class=p>[]])</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#custom-hooks><h2 id=custom-hooks><span class=hanchor arialabel=Anchor># </span>Custom Hooks</h2></a><p>Un «hook personalizado» es una función que empieza por <code>use</code> y que puede utilizar otros hooks. Son ideales para reutilizar lógica en diferentes componentes.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=c1>// ./hooks/useCounter.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=kd>function</span> <span class=nx>useCounter</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>[</span><span class=nx>count</span><span class=p>,</span> <span class=nx>setCount</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>increment</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nx>setCount</span><span class=p>(</span><span class=nx>count</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>decrement</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nx>setCount</span><span class=p>(</span><span class=nx>count</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>{</span> <span class=nx>count</span><span class=p>,</span> <span class=nx>increment</span><span class=p>,</span> <span class=nx>decrement</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// App.jsx
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>import</span> <span class=p>{</span> <span class=nx>useCounter</span> <span class=p>}</span> <span class=nx>from</span> <span class=s1>&#39;./hooks/useCounter.js&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>Counter</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=p>{</span> <span class=nx>count</span><span class=p>,</span> <span class=nx>increment</span><span class=p>,</span> <span class=nx>decrement</span> <span class=p>}</span> <span class=o>=</span> <span class=nx>useCounter</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>button</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>decrement</span><span class=p>}&gt;</span><span class=o>-</span><span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>span</span><span class=p>&gt;{</span><span class=nx>count</span><span class=p>}&lt;/</span><span class=nt>span</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>button</span> <span class=na>onClick</span><span class=o>=</span><span class=p>{</span><span class=nx>increment</span><span class=p>}&gt;</span><span class=o>+</span><span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#montado-doble-al-iniciar-usando-reactstrictmode><h3 id=montado-doble-al-iniciar-usando-reactstrictmode><span class=hanchor arialabel=Anchor># </span>Montado doble al iniciar usando <code>&lt;React.StrictMode></code></h3></a><p>Al usar el componente <code>React.StrictMode</code> para envolver nuestra app en entorno de desarrollo este monta, desmonta y vuelve a montar los componentes para asegurarse de que no tienen fallos, es simplemente para depurar, no ocurre en producción.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>React.StrictMode</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>App</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>React.StrictMode</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#formularios><h2 id=formularios><span class=hanchor arialabel=Anchor># </span>Formularios</h2></a><p>Hay dos formas de gestionar formularios con React:</p><ul><li>Descontrolada 🤪 / no controlado por React, obtenemos y validamos los valores al enviar, <strong>útil para evitar usar muchos
+<a rel=noopener class="internal-link broken" data-src=#useRef>useRef</a></strong>, <strong>suele ser la forma más rápida</strong>.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kd>function</span> <span class=nx>MyForm</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>handleSubmit</span><span class=p>(</span><span class=nx>event</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	 <span class=c1>// Prevenir que el navegador recargue la página al enviar
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>event</span><span class=p>.</span><span class=nx>preventDefault</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// Leer los datos del formulario
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kr>const</span> <span class=nx>form</span> <span class=o>=</span> <span class=nx>event</span><span class=p>.</span><span class=nx>target</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>formData</span> <span class=o>=</span> <span class=k>new</span> <span class=nx>FormData</span><span class=p>(</span><span class=nx>form</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Obtiene solo el valor de **un** input
+</span></span></span><span class=line><span class=cl><span class=c1></span>	 <span class=kr>const</span> <span class=nx>inputValue</span> <span class=o>=</span> <span class=nx>formData</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s1>&#39;myInput&#39;</span><span class=p>)</span> <span class=c1>// &#39;someValue&#39;
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=c1>// ? Se le puede pasar a una api como body tmb
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// fetch(&#39;/some-api&#39;, { method: form.method, body: formData })
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Transformar todos los campos a JSON
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kr>const</span> <span class=nx>formJson</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>fromEntries</span><span class=p>(</span><span class=nx>formData</span><span class=p>.</span><span class=nx>entries</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>formJson</span><span class=p>)</span> <span class=c1>// { myInput: &#39;someValue&#39; }
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;</span><span class=nt>form</span> <span class=na>method</span><span class=o>=</span><span class=s>&#34;post&#34;</span> <span class=na>onSubmit</span><span class=o>=</span><span class=p>{</span><span class=nx>handleSubmit</span><span class=p>}&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;</span><span class=nt>label</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>        <span class=nx>Text</span> <span class=nx>input</span><span class=o>:</span> <span class=p>&lt;</span><span class=nt>input</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;myInput&#34;</span> <span class=na>defaultValue</span><span class=o>=</span><span class=s>&#34;Some initial value&#34;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>      <span class=p>&lt;/</span><span class=nt>label</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>    <span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>Controlada, es más útil para simplificar la validación de formularios, más lento porque cada vez que se actualice el input se vuelve a renderizar el elemento.</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-jsx data-lang=jsx><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>query</span><span class=p>,</span> <span class=nx>setQuery</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=s1>&#39;&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=p>[</span><span class=nx>error</span><span class=p>,</span> <span class=nx>setError</span><span class=p>]</span> <span class=o>=</span> <span class=nx>useState</span><span class=p>(</span><span class=kc>null</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>handleSubmit</span> <span class=o>=</span> <span class=p>(</span><span class=nx>event</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>event</span><span class=p>.</span><span class=nx>preventDefault</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>query</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// También podemos validar aquí ;)
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>handleChange</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>newQuery</span> <span class=o>=</span> <span class=nx>event</span><span class=p>.</span><span class=nx>target</span><span class=p>.</span><span class=nx>value</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  <span class=c1>// Una de las ventajas de la forma controlada
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=c1>// es que permite pre-validaciones, de esta forma no se
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=c1>// renderiza la query sin empieza por espacio
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=k>if</span> <span class=p>(</span><span class=nx>newQuery</span><span class=p>.</span><span class=nx>startsWith</span><span class=p>(</span><span class=s1>&#39; &#39;</span><span class=p>))</span> <span class=k>return</span>
+</span></span><span class=line><span class=cl>  <span class=nx>setQuery</span><span class=p>(</span><span class=nx>newQuery</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Validar cada vez que cambie query
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>useEffect</span><span class=p>(()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=p>(</span><span class=nx>query</span><span class=p>.</span><span class=nx>length</span> <span class=o>&lt;</span> <span class=mi>3</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>setError</span><span class=p>(</span><span class=s1>&#39;La búsqueda debe tener al menos 3 caracteres.&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=nx>setError</span><span class=p>(</span><span class=kc>null</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>},</span> <span class=p>[</span><span class=nx>query</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=p>&lt;</span><span class=nt>form</span> <span class=na>onSubmit</span><span class=o>=</span><span class=p>{</span><span class=nx>handleSubmit</span><span class=p>}</span> <span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>input</span> <span class=na>onChange</span><span class=o>=</span><span class=p>{</span><span class=nx>handleChange</span><span class=p>}</span> <span class=na>value</span><span class=o>=</span><span class=p>{</span><span class=nx>query</span><span class=p>}</span> <span class=na>name</span><span class=o>=</span><span class=s>&#39;query&#39;</span> <span class=p>/&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=p>&lt;</span><span class=nt>button</span> <span class=na>type</span><span class=o>=</span><span class=s>&#39;submit&#39;</span><span class=p>&gt;</span><span class=nx>Enviar</span><span class=p>&lt;/</span><span class=nt>button</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl><span class=p>&lt;/</span><span class=nt>form</span><span class=p>&gt;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#búsqueda-con-debounce><h2 id=búsqueda-con-debounce><span class=hanchor arialabel=Anchor># </span>Búsqueda con debounce</h2></a><p>Si queremos hacer una búsqueda automática a medida que el usuario escribe lo más óptimo sería implementar un <strong>debounce</strong>.</p><a href=#debounce><h3 id=debounce><span class=hanchor arialabel=Anchor># </span>Debounce</h3></a><p>Un patrón de rebote o «debounce» pospone la ejecución de una función hasta que transcurra un determinado tiempo de espera.</p><p>Nuevos intentos de ejecutar la función cancelarán la ejecución pendiente y reiniciarán el tiempo de espera.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-ts data-lang=ts><span class=line><span class=cl><span class=kr>const</span> <span class=nx>debounce</span> <span class=o>=</span> <span class=p>(</span><span class=nx>callback</span><span class=p>,</span> <span class=nx>tiempoDeEspera</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>timeout</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(...</span><span class=nx>args</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=nx>clearTimeout</span><span class=p>(</span><span class=nx>timeout</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>	<span class=nx>timeout</span> <span class=o>=</span> <span class=nx>setTimeout</span><span class=p>(()</span><span class=o>=&gt;</span> <span class=nx>callback</span><span class=p>(...</span><span class=nx>args</span><span class=p>),</span> <span class=nx>tiempoDeEspera</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>debounce</span> <span class=o>=</span> <span class=p>(</span><span class=nx>fn</span>: <span class=kt>Function</span><span class=p>,</span> <span class=nx>waitTime</span> <span class=o>=</span> <span class=mi>300</span><span class=p>)</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kd>let</span> <span class=nx>timeoutId</span>: <span class=kt>ReturnType</span><span class=p>&lt;</span><span class=nt>typeof</span> <span class=na>setTimeout</span><span class=p>&gt;;</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=p>(</span><span class=k>this</span><span class=o>:</span> <span class=kt>any</span><span class=p>,</span> <span class=p>...</span><span class=nx>args</span>: <span class=kt>any</span><span class=p>[])</span> <span class=o>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>clearTimeout</span><span class=p>(</span><span class=nx>timeoutId</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>timeoutId</span> <span class=o>=</span> <span class=nx>setTimeout</span><span class=p>(()</span> <span class=o>=&gt;</span> <span class=nx>fn</span><span class=p>.</span><span class=nx>apply</span><span class=p>(</span><span class=k>this</span><span class=p>,</span> <span class=nx>args</span><span class=p>),</span> <span class=nx>waitTime</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=https://coffeebytes.dev/debounce-y-throttle-en-javascript/images/DebounceORebote.png width=auto alt=img></p><hr><a href=#prueba-tećnica><h2 id=prueba-tećnica><span class=hanchor arialabel=Anchor># </span>Prueba tećnica</h2></a><p>Una de las pruebas más comunes es fetching de datos.</p><ul><li>Dos estados, uno que depende del otro.</li><li>Saber utilizar el punto de entrada en vez de create-x-app/vite template.</li><li>Un <code>useEffect</code> por responsabilidad.</li><li>Gestión de errores al final para no perder tiempo al principio.</li><li>Saber básico de flex.</li><li>1 efecto por responsabilidad, no poner varias tareas dentro del mismo.</li><li>Si preguntan por que hacer después, tests.</li></ul></div></article><hr><div class=page-end id=footer><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No se encontraron backlinks</li></ul></div><div><script async src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Gráfico interactivo</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://vicente015.dev/js/graph.2d9e48dbe7ea47c0ef1c58296ce14448.js></script></div></div><div id=contact_buttons><footer><p>Hecho por Vicente015 usando <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2023</p><ul><li><a href=https://vicente015.dev/>Inicio</a></li><li><a href=https://twitter.com/vicente015_>Twitter</a></li><li><a href=https://github.com/Vicente015>Github</a></li></ul></footer></div></div></body></html>
