@@ -50,7 +50,7 @@ Restringe la búsqueda a los nodos que cumplan con una condición.
 
 Ejemplo:
 
-```bas
+```bash
 /libro/capitulo[@num="1"]/parrafo
 ```
 

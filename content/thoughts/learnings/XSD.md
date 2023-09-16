@@ -12,12 +12,12 @@ El XSD es un formato para describir el esquema de un XML.
 
 Un elemento simple es un elemento que solo puede contener texto, no contiene ningún otro elemento ni atributos.
 
-```xsd
+```xml
 <xs:element name="xxx" type="yyy"/>
 ```
 
 ### Valor por defecto
-```xsd
+```xml
 <xs:element name="color" type="xs:string" default="red"/>
 ```
 
@@ -36,7 +36,7 @@ Un elemento simple es un elemento que solo puede contener texto, no contiene nin
 ```xml
 <lastname lang="EN">Smith</lastname>
 ```
-```xsd
+```xml
 <xs:attribute name="lang" type="xs:string" use="required"/>
 ```
 
@@ -60,7 +60,7 @@ Las restricciones se usan para limitar los valores que aceptamos para elementos 
 
 
 ### Restringir rango valores
-```xsd
+```xml
 <xs:element name="age">
   <xs:simpleType>
     <xs:restriction base="xs:integer">
@@ -72,7 +72,7 @@ Las restricciones se usan para limitar los valores que aceptamos para elementos 
 ```
 
 ### Restricciones enums
-```xsd
+```xml
 <xs:element name="car">
   <xs:simpleType>
     <xs:restriction base="xs:string">
@@ -88,7 +88,7 @@ Las restricciones se usan para limitar los valores que aceptamos para elementos 
 Podemos definir una restricción en el contenido de un string usando [Regex](https://regexr.com).
 
 Ejemplo, restringir 3 primeras iniciales:
-```xsd
+```xml
 <xs:element name="initials">
   <xs:simpleType>
     <xs:restriction base="xs:string">
@@ -99,7 +99,7 @@ Ejemplo, restringir 3 primeras iniciales:
 ```
 
 ### Restricciones de longitud
-```xsd
+```xml
 <xs:element name="initials">
   <xs:simpleType>
     <xs:restriction base="xs:string">
@@ -112,7 +112,7 @@ Ejemplo, restringir 3 primeras iniciales:
 ## Tipos genéricos
 Podemos reutilizar un tipo de dato en varios elementos poniéndolo antes de declararlos, al inicio del esquema.
 
-```xsd
+```xml
 <xs:simpleType name="carType">
   <xs:restriction base="xs:string">
     <xs:enumeration value="Audi"/>
@@ -133,7 +133,7 @@ Un elemento complejo define un elemento XML que contiene otros elementos o atrib
   <lastname>Smith</lastname>
 </employee>
 ```
-```xsd
+```xml
 <xs:element name="employee">
   <xs:complexType>
     <xs:sequence>
@@ -153,7 +153,7 @@ Un elemento complejo define un elemento XML que contiene otros elementos o atrib
 ### Limitar nº ocurrencias
 Podemos limitar cuantas veces un elemento puede estar.
 
-```xsd
+```xml
 <xs:element name="person">
   <xs:complexType>
     <xs:sequence>
@@ -167,7 +167,7 @@ Podemos limitar cuantas veces un elemento puede estar.
 ### Grupos de elementos
 Podemos definir unos grupos con conjuntos de elementos para referenciarlos varias veces.
 
-```xsd
+```xml
 <xs:group name="persongroup">
   <xs:sequence>
     <xs:element name="firstname" type="xs:string"/>
@@ -189,7 +189,7 @@ Podemos definir unos grupos con conjuntos de elementos para referenciarlos varia
 ### Grupos de atributos
 También podemos definir conjuntos de atributos.
 
-```xsd
+```xml
 <xs:attributeGroup name="personattrgroup">
   <xs:attribute name="firstname" type="xs:string"/>
   <xs:attribute name="lastname" type="xs:string"/>
@@ -202,14 +202,14 @@ Los elementos de sustitución nos permiten declarar como una copia o enlace a un
 
 __Deben declararse al principio del esquema.__
 
-```xsd
+```xml
 <xs:element name="nombre" type="xs:string"/>
 <xs:element name="name" substitutionGroup="nombre"/>
 ```
 
 ## Ejemplos
 
-```xsd
+```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 

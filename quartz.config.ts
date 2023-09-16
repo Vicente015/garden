@@ -3,13 +3,11 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "vicente015.dev",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
-    baseUrl: "quartz.jzhao.xyz",
+    analytics: null,
+    baseUrl: "vicente015.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
@@ -20,24 +18,24 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: 'hsl(123, 12%, 95%)',
+          lightgray: 'hsl(123, 30%, 90%)',
+          gray: 'hsl(123, 30%, 35%)',
+          darkgray: 'hsl(123, 20%, 30%)',
+          dark: 'hsl(123, 90%, 20%)',
+          secondary: 'hsl(123, 40%, 40%)',
+          tertiary: 'hsl(123, 40%, 20%)',
+          highlight: 'hsl(123, 30%, 90%)',
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          light: 'hsl(123, 90%, 4%)',
+          lightgray: 'hsl(123, 17%, 24%)',
+          gray: 'hsl(123, 25%, 70%)',
+          darkgray: 'hsl(123, 20%, 85%)',
+          dark: 'hsl(123, 90%, 80%)',
+          secondary: 'hsl(123, 60%, 85%)',
+          tertiary: 'hsl(123, 70%, 70%)',
+          highlight: 'hsl(123, 17%, 24%)',
         },
       },
     },
@@ -47,7 +45,7 @@ const config: QuartzConfig = {
       Plugin.FrontMatter(),
       Plugin.TableOfContents(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
+        priority: ["git", "frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
@@ -65,7 +63,7 @@ const config: QuartzConfig = {
       Plugin.TagPage(),
       Plugin.ContentIndex({
         enableSiteMap: true,
-        enableRSS: true,
+        enableRSS: true
       }),
       Plugin.Assets(),
       Plugin.Static(),
