@@ -17,6 +17,7 @@ const config: QuartzConfig = {
         code: "IBM Plex Mono",
       },
       colors: {
+        /*
         lightMode: {
           light: 'hsl(123, 12%, 95%)',
           lightgray: 'hsl(123, 30%, 90%)',
@@ -35,6 +36,27 @@ const config: QuartzConfig = {
           dark: 'hsl(123, 90%, 80%)',
           secondary: 'hsl(123, 60%, 85%)',
           tertiary: 'hsl(123, 70%, 70%)',
+          highlight: 'hsl(123, 17%, 24%)',
+        },
+        */
+        lightMode: {
+          light: 'hsl(123, 12%, 95%)',
+          lightgray: 'hsl(123, 30%, 90%)',
+          gray: "#b8b8b8",
+          darkgray: "#4e4e4e",
+          dark: "#2b2b2b",
+          secondary: 'hsl(123, 40%, 40%)',
+          tertiary: 'hsl(123, 40%, 20%)',
+          highlight: 'hsl(123, 30%, 90%)',
+        },
+        darkMode: {
+          light: "hsl(123, 88%, 3%)",
+          lightgray: 'hsl(123, 17%, 24%)',
+          gray: "#646464",
+          darkgray: "#d4d4d4",
+          dark: "#ebebec",
+          secondary: 'hsl(123, 40%, 60%)',
+          tertiary: 'hsl(123, 40%, 70%)',
           highlight: 'hsl(123, 17%, 24%)',
         },
       },
