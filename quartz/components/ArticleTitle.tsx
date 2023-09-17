@@ -2,8 +2,12 @@ import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 function ArticleTitle({ fileData }: QuartzComponentProps) {
   const title = fileData.frontmatter?.title
+  const icon = fileData.frontmatter?.tags.includes('fruit') ? 'fruit' : fileData.frontmatter?.tags.includes('sapling') ? 'sapling' : 'seed'
   if (title) {
-    return <h1 class="article-title">{title}</h1>
+    return <h1 class="article-title">
+      <img className={'tag-pixel-icon'} src={`/static/${icon}-icon.png`} alt="Seed icon" />
+      {title}
+    </h1>
   } else {
     return null
   }

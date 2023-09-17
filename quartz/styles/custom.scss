@@ -1,1 +1,39 @@
 // put your custom CSS here!
+
+.tag-pixel-icon {
+  display: inline;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  width: 40px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  filter:
+    drop-shadow(1px 1px 0 black)
+    drop-shadow(1px -1px 0 black)
+    drop-shadow(-1px 1px 0 black)
+    drop-shadow(-1px -1px 0 black)
+}
+
+.tag-pixel-icon:hover {
+  animation: vertical-shaking 0.4s infinite;
+}
+
+@keyframes horizontal-shaking {
+ 0% { transform: translateX(0) }
+ 25% { transform: translateX(3px) }
+ 50% { transform: translateX(-3px) }
+ 75% { transform: translateX(3px) }
+ 100% { transform: translateX(0) }
+}
+
+@keyframes vertical-shaking {
+ 0% { transform: translateY(0) }
+ 25% { transform: translateY(-3px) }
+ 50% { transform: translateY(-6px) }
+ 75% { transform: translateY(-3px) }
+ 100% { transform: translateY(0) }
+}
+

@@ -24,9 +24,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.DesktopOnly(
       Component.RecentNotes({
-      limit: 4,
-      filter: (f) => f.slug!.startsWith('thoughts/'),
-      linkToMore: "thoughts/" as SimpleSlug,
+        limit: 4,
+        filter: (f) => f.slug!.startsWith('thoughts/'),
+        linkToMore: "thoughts/" as SimpleSlug
       })
     ),
     Component.DesktopOnly(Component.TableOfContents())
