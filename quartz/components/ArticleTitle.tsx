@@ -1,6 +1,6 @@
 import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
-function ArticleTitle({ fileData }: QuartzComponentProps) {
+function ArticleTitle({ fileData, displayClass }: QuartzComponentProps) {
   const title = fileData.frontmatter?.title
   const icon = fileData.frontmatter?.tags.includes('fruit') ? 'fruit' : fileData.frontmatter?.tags.includes('sapling') ? 'sapling' : 'seed'
   if (title) {
