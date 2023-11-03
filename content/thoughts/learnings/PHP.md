@@ -1,10 +1,10 @@
 ---
 name: "PHP"
+date: 2023-09-10
 tags:
  - seed
 ---
 
-# PHP
 Es un lenguaje de programación interpretado del lado del servidor y de uso general que se adapta especialmente al desarrollo web.
 
 Para denominar código de PHP se deben de indicar las **etiquetas de apertura y cierre**.

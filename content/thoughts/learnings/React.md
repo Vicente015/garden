@@ -343,6 +343,11 @@ const getMovies = useCallback(async () => {
 }, []])
 ```
 
+### `useId`
+Se usa para generar un identificador único muy útil cuando usamos `<label for={filterId}>` y `<input id={filterId}>`.
+
+
+
 ## Custom Hooks
 Un «hook personalizado» es una función que empieza por `use` y que puede utilizar otros hooks. Son ideales para reutilizar lógica en diferentes componentes.
 
@@ -479,6 +484,7 @@ const debounce = (fn: Function, waitTime = 300) => {
 ```
 
 ![img](https://coffeebytes.dev/debounce-y-throttle-en-javascript/images/DebounceORebote.png)
+
 
 ---
 
