@@ -17,6 +17,7 @@ Lamentablemente no conseguí que me funcionara debido a que necesitas instalar `
 
 La solución es instalar un grupo de paquetes que contienen la mayoría de extensiones/paquetes (`texlive-full`), el problema es que requiere un montón de paquetes y pesan demasiado ¿casi **3GB** para hacer bonito un PDF? 😢
 ![[Pasted image 20230921213423.png]]
+
 ## Usando contenedores
 Como yo tan solo necesitaba generar un PDF y no todas las características que incluye la herramienta así que decidí usar las herramientas por separado.
 Por suerte, podemos ejecutar la herramienta [dentro de un contenedor](https://github.com/Wandmalfarbe/pandoc-latex-template/tree/master#docker-image) de una forma forma más sencilla porque usa una imagen que ya viene con todo lo necesario instalado.
@@ -43,6 +44,8 @@ Básicamente ejecuta el contenedor como root y le añado el sufijo `:Z` por [có
 ```shell
 podman run --rm -v "$(pwd):/data:Z" pandoc/extra ARCHIVO_ENTRADA.md -o ARCHIVO_SALIDA.pdf --template eisvogel --listings
 ```
+
+Probablemente quieras hacerte un script que te facilite poner ese comando tan largo ;).
 
 ## Bóveda de Obsidian
 Ahora que puedo generar los documentos correctamente, necesito una herramienta para poder escribir y gestionar los archivos Markdown así que usaré [Obsidian](https://obsidian.md/), además pone los enlaces correctamente al pegar imágenes por lo cual es súper cómodo.
