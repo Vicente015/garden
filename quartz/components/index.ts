@@ -19,10 +19,12 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+import Cursor from "./Cursor"
 
 export {
   ArticleTitle,
   Content,
+  Cursor,
   TagContent,
   FolderContent,
   Darkmode,

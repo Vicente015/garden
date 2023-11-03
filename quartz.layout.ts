@@ -2,6 +2,13 @@ import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 import { SimpleSlug } from "./quartz/util/path"
 
+const recentNotes = Component.RecentNotes({
+  title: 'Notas recientes',
+  limit: 3,
+  filter: (f) => f.slug!.startsWith('thoughts/') && f.slug! !== "posts/index" && !f.frontmatter?.noindex,
+  linkToMore: "thoughts/" as SimpleSlug
+})
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -17,7 +24,7 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.Breadcrumbs(),
+    // Component.Breadcrumbs(),
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -27,14 +34,12 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(
-      Component.RecentNotes({
-        limit: 4,
-        filter: (f) => f.slug!.startsWith('thoughts/'),
-        linkToMore: "thoughts/" as SimpleSlug
-      })
-    ),
-    Component.DesktopOnly(Component.TableOfContents())
+    Component.DesktopOnly(recentNotes),
+    Component.DesktopOnly(Component.TableOfContents()),
+  ],
+  right: [
+    Component.Graph(),
+    Component.Backlinks()
   ],
 }
 

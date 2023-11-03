@@ -8,7 +8,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     baseUrl: "vicente015.dev",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["**/private", "**/templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       typography: {
@@ -72,7 +72,7 @@ const config: QuartzConfig = {
       Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.CrawlLinks({ markdownLinkResolution: "shortest", openLinksInNewTab: false }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.Description(),
     ],
