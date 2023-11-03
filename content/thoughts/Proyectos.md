@@ -12,7 +12,7 @@ Esta es una lista de proyectos que he acabado o que estoy manteniendo.
 
 Creado para potenciar la comunicación en servidores con una comunidad multicultural. Facilita la lectura de anuncios a través de botones y la creación de anuncios de forma intuitiva con diálogos integrados directamente en la interfaz de Discord.
 
-## Lovely - Envía cartas de amor por [[Internet]]
+## Lovely - Genera cartas encantadoras
 [GitHub](https://github.com/vicente015/lovely)
 
 Crea cartas o webs encantadoras y customizables a partir de un archivo [«Markdown»](https://es.wikipedia.org/wiki/Markdown), después, puedes exportarlo a PDF o alojar tu mismo la página. Usa [Lume](https://lume.land/), una librería para páginas estáticas en Deno.
