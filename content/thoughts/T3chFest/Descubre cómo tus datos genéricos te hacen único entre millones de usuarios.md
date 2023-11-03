@@ -6,7 +6,7 @@ tags:
 - t3chfest23
 ---
 
-[T3chFest 02/03/2023 11:30, Track 4.](https://t3chfest.es/2023/programa/datos-genericos-unico-millones-usuarios)
+[T3chFest 02/03/2023 11:30, Track 4.](https://www.youtube.com/watch?v=jLrjlzZJkQ0)
 
 relacionado: [[thoughts/Datos|datos]]
 

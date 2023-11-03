@@ -7,7 +7,7 @@ tags:
 - t3chfest23
 ---
 
-[T3chFest 02/03/2023 12:30, Track 2.](https://t3chfest.es/2023/programa/ia-datos-disminuir-desperdicio-alimentos)
+[T3chFest 02/03/2023 12:30, Track 2.](https://www.youtube.com/watch?v=LIqFbj87rEg)
 
 Se desperdicia el 30% de comida producida a nivel global.
 Además, se desperdician también los recursos destinados a producir dicho alimento (agua, suelo, proceso, etc).

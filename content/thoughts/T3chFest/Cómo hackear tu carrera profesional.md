@@ -6,7 +6,7 @@ tags:
 - t3chfest23
 ---
 
-[T3chFest 02/03/2023 15:30, Track 1.](https://t3chfest.es/2023/programa/hackear-tu-carrera-profesional)
+[T3chFest 02/03/2023 15:30, Track 1.](https://www.youtube.com/watch?v=G2ztKhvDMKk)
 
 - Diagrama de Venn
 - Trazar un plan.

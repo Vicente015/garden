@@ -6,7 +6,7 @@ tags:
 - t3chfest23
 ---
 
-[T3chFest 02/03/2023 10:00, Track 1.](https://t3chfest.es/2023/programa/soy-mayor-no-idiota-brecha-digital-inclusividad)
+[T3chFest 02/03/2023 10:00, Track 1.](https://www.youtube.com/watch?v=hUF9TDPHLLM)
 
 ## ¿Qué es la brecha digital?
 La desigualdad digital entre grupos de población.

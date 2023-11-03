@@ -6,7 +6,7 @@ tags:
 - t3chfest23
 ---
 
-[T3chFest 03/03/2023 17:00 Track 1.](https://t3chfest.es/2023/programa/un-paseo-por-la-evolucion-del-frontend)
+[T3chFest 03/03/2023 17:00 Track 1.](https://www.youtube.com/watch?v=PrHjgEpAyks)
 
 ### Fase 1
 - Vanilla

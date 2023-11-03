@@ -6,7 +6,7 @@ tags:
 - t3chfest23
 ---
 
-[T3chFest 03/03/2023 09:00, Track 1.](https://t3chfest.es/2023/programa/desarrollo-y-diseno-todas-a-una-fuenteovejuna)
+[T3chFest 03/03/2023 09:00, Track 1.](https://www.youtube.com/watch?v=sGJSUfQuQXg)
 
 ## Investigar
 - Penpot
