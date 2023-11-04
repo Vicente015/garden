@@ -20,7 +20,7 @@ La solución es instalar un grupo de paquetes que contienen la mayoría de exten
 
 ## Usando contenedores
 Como yo tan solo necesitaba generar un PDF y no todas las características que incluye la herramienta así que decidí usar las herramientas por separado.
-Por suerte, podemos ejecutar la herramienta [dentro de un contenedor](https://github.com/Wandmalfarbe/pandoc-latex-template/tree/master#docker-image) de una forma forma más sencilla porque usa una imagen que ya viene con todo lo necesario instalado.
+Por suerte, podemos ejecutar la herramienta [dentro de un contenedor](https://github.com/Wandmalfarbe/pandoc-latex-template/tree/master#docker-image) de una forma más sencilla porque usa una imagen que ya viene con todo lo necesario instalado.
 
 No explicaré como instalar [Docker](https://www.docker.com/) o [Podman](https://podman.io/), así que te recomiendo que busques la mejor manera para hacerlo en tu sistema operativo.
 
