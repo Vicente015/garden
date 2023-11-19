@@ -346,7 +346,103 @@ const getMovies = useCallback(async () => {
 ### `useId`
 Se usa para generar un identificador único muy útil cuando usamos `<label for={filterId}>` y `<input id={filterId}>`.
 
+### `useContext`
+[Artículo en la documentación de React](https://react.dev/learn/passing-data-deeply-with-context/)
 
+Un contexto le permite a un componente padre pasar datos a todo el árbol de componentes debajo de él. Esto nos permite separar toda la lógica y que cualquier componente pueda leer directamente del contexto sin necesidad de pasárselo, evitando hacer *prop drilling*.
+
+[![Screenshot-from-2023-11-09-20-58-36.png](https://i.postimg.cc/Zngd9ghz/Screenshot-from-2023-11-09-20-58-36.png)](https://postimg.cc/64r3gM3M)
+
+Los contextos se pueden emplear para mucho más que hacer un estado global, se puede usar para inyectar dependencias, traducciones, configuraciones, etc.
+
+`useContext` como estado global está pensado para estados muy pequeños, que cambien con poca frecuencia.
+
+```jsx title="context/filters.jsx"
+import { createContext, useState } from 'react'
+
+// 1. Crear el contexto
+export const FiltersContext = createContext()
+
+// 2. Crear el Provider, para proveer el contexto
+export const FiltersProvider = ({ children }) => {
+  const [filters, setFilters] = useState({
+    category: 'all',
+    minPrice: 0
+  })
+
+  return (
+    <FiltersContext.Provider value={{
+      filters,
+      setFilters
+    }}
+    >
+      {children}
+    </FiltersContext.Provider>
+  )
+}
+```
+
+```jsx title="main.jsx"
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import { FiltersProvider } from './context/filters.jsx'
+
+// Metemos nuestra App dentro del Provider de Filters
+// esto permite que podamos usar el contexto de Filters
+// dentro de todo el árbol de componentes a partir de App
+ReactDOM.createRoot(document.querySelector('#root')).render(
+  <FiltersProvider>
+    <App />
+  </FiltersProvider>
+)
+```
+
+```js title="hooks/useFilters.js"
+import { useContext } from 'react'
+import { FiltersContext } from '../context/filters.jsx'
+
+// Custom hook que accede el contexto
+// y provee funciones para manejarlo
+export function useFilters () {
+  const { filters, setFilters } = useContext(FiltersContext)
+
+  const filterProducts = (products) => {
+    return products.filter(product => (
+      product.price >= filters.minPrice &&
+        (filters.category === 'all' || product.category === filters.category)
+    ))
+  }
+
+  return { filterProducts, filters, setFilters }
+}
+```
+
+```jsx title="components/Filters.jsx"
+import { useFilters } from '../hooks/useFilters'
+
+export function Filters () {
+  const { filters, setFilters } = useFilters()
+
+  const handleChangeMinPrice = (event) => {
+    setFilters(previousState => ({
+      ...previousState,
+      minPrice: event.target.value
+    }))
+  }
+...
+```
+
+### `useReducer`
+Nos permite manejar el estaod de una manera escalable porque se basa en que recibe en una función el estado actual y la acción que tiene que hacer.
+
+todo: añadir ejemplos código
+ventajas:
+
+- Fácil de testear.
+- Lógica separada.
+- Framework agnostic.
+- ...
 
 ## Custom Hooks
 Un «hook personalizado» es una función que empieza por `use` y que puede utilizar otros hooks. Son ideales para reutilizar lógica en diferentes componentes.

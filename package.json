@@ -17,7 +17,9 @@
     "format": "npx prettier . --write",
     "test": "tsx ./quartz/util/path.test.ts",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
-    "quartz": "./quartz/bootstrap-cli.mjs"
+    "quartz": "./quartz/bootstrap-cli.mjs",
+    "build": "pnpm run quartz build",
+    "serve": "pnpm run build --serve"
   },
   "engines": {
     "npm": ">=9.3.1",
