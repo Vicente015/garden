@@ -69,7 +69,7 @@ export default ((userOpts?: Partial<Options>) => {
         </ul>
         {opts.linkToMore && remaining > 0 && (
           <p>
-            <a href={resolveRelative(fileData.slug!, opts.linkToMore)}>See {remaining} more →</a>
+            <a href={resolveRelative(fileData.slug!, opts.linkToMore)}>Ver {remaining} más →</a>
           </p>
         )}
       </div>

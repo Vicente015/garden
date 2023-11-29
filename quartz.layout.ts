@@ -9,6 +9,8 @@ const recentNotes = Component.RecentNotes({
   linkToMore: "thoughts/" as SimpleSlug
 })
 
+const tableOfContents = Component.TableOfContents({ layout: 'modern' })
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -34,12 +36,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.DesktopOnly(tableOfContents),
     Component.DesktopOnly(recentNotes),
-    Component.DesktopOnly(Component.TableOfContents()),
   ],
   right: [
+    Component.MobileOnly(recentNotes),
+    Component.Backlinks(),
     Component.Graph(),
-    Component.Backlinks()
   ],
 }
 
