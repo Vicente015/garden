@@ -355,7 +355,7 @@ Un contexto le permite a un componente padre pasar datos a todo el árbol de com
 
 Los contextos se pueden emplear para mucho más que hacer un estado global, se puede usar para inyectar dependencias, traducciones, configuraciones, etc.
 
-`useContext` como estado global está pensado para estados muy pequeños, que cambien con poca frecuencia.
+`useContext` como estado global está pensado para estados muy pequeños, que cambien con poca frecuencia. Como alternativa para proyectos más grandes tenemos Zustand, Redux, etc.
 
 ```jsx title="context/filters.jsx"
 import { createContext, useState } from 'react'
@@ -581,6 +581,8 @@ const debounce = (fn: Function, waitTime = 300) => {
 
 ![img](https://coffeebytes.dev/debounce-y-throttle-en-javascript/images/DebounceORebote.png)
 
+TODO: Sustituir imagen remota por dibujo local ;)
+
 
 ---
 
@@ -594,3 +596,8 @@ Una de las pruebas más comunes es fetching de datos.
 - Saber básico de flex.
 - 1 efecto por responsabilidad, no poner varias tareas dentro del mismo.
 - Si preguntan por que hacer después, tests.
+
+
+TODO:
+1. Explicar lógica de Children con null y aceder a Childrens del parent?, utilidad Children de React.
+2. Utilidad lazy/Suspense de React

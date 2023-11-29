@@ -12,7 +12,7 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     theme: {
       typography: {
-        header: "Schibsted Grotesk",
+        header: "DM Serif Text",
         body: "Source Sans Pro",
         code: "IBM Plex Mono",
       },
@@ -73,7 +73,7 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest", openLinksInNewTab: false }),
-      Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Latex({ renderEngine: "mathjax" }),
       Plugin.Description(),
     ],
     filters: [Plugin.RemoveDrafts()],

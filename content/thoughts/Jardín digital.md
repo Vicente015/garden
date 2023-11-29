@@ -16,9 +16,9 @@ En mi jardín he decidido dividir las notas que escribo y clasificarlas por su e
 
 ![[thoughts/images/SeedEvolution.png]]
 
-* Seed: es la idea inicial recién escrita y a medio-acabar.
-* Sapling: es una nota derivada de otra o con algo de maduración.
-* Fruit: representa una nota que involucra muchas otras y que representa algo complejo o detallado.
+* [[tags/seed|Seed]]: es la idea inicial recién escrita y a medio-acabar.
+* [[tags/sapling|Sapling]]: es una nota derivada de otra o con algo de maduración.
+* [[tags/fruit|Fruit]]: representa una nota que involucra muchas otras y que representa algo complejo o detallado.
 
 [^1]: Fuente: [https://maggieappleton.com/garden-history](https://maggieappleton.com/garden-history)
 [^2]: Fuente: [https://jzhao.xyz/posts/digital-gardening](https://jzhao.xyz/posts/digital-gardening)

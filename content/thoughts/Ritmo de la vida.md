@@ -22,34 +22,36 @@ Todo aquello me llevó a pensar, ¿y si pudiéramos representar el ritmo de la v
 
 ![[thoughts/images/visualizacion-felicidad.png]]
 
-
-
 ## Parametrizando
 
 Entonces me puse a pensar en formas de parametrizarlo, para [medir una frecuencia](https://es.wikipedia.org/wiki/Frecuencia_card%C3%ADaca) existe la siguiente fórmula:
 
-$$ f = \frac{n \ veces}{T} $$
+$$
+f = \frac{n \ veces}{T}
+$$
 
 Por ejemplo, todos conocemos la frecuencia cardíaca:
 
-$$ f = \frac{n \ latidos}{minuto} $$
+$$
+f = \frac{n \ latidos}{minuto}
+$$
 
 Pero ¿qué contamos y qué tiempo tendríamos en cuenta?
 
-Creo que la mejor forma sería contar el número de veces que disfrutas la vida, la felicidad, esos momentos donde recibes un momento de claridad y piensas "fuck, life is good", el tiempo podría ser como queramos visualizarlo, en días, meses o años.
+Creo que la mejor forma sería contar el número de veces que te sientes feliz y el tiempo podría ser como queramos visualizarlo, en días, meses o años.
 
-$$ f = \frac{felicidad}{día} $$
+$$
+f = \frac{felicidad}{dia}
+$$
 
 ## ¿Cómo medimos la felicidad?
 
 Imagina que te sientes [*sin problemas, hidratado, feliz, en tu línea, centrado y floreciente*](https://knowyourmeme.com/memes/unbothered-moisturized-happy-in-my-lane-focused-flourishing) y quieres registrar ese momento de felicidad para que sea representado.
 
-![[thoughts/images/frogandtoadvinito.jpg|400]]
+![[thoughts/images/Pasted image 20231129120703.png|600]]
 
 ¿Cómo calificamos nuestra felicidad? ¿qué valor le damos? ¿de qué forma la medimos?
-Esto se vuelve verdaderamente complicado *como la psicología en si misma* cuando tienes que considerar que [podemos sentir dos emociones contradictorias a la vez](https://youtu.be/G9rIdj1lyJ4?t=847) y solo manifestar una en ese momento.
-
-También puedes no sentirte ni triste ni feliz, algo neutro, o no saber identificar bien qué es lo que sientes.
+Esto se vuelve complicado porque puedes no sentirte ni triste ni feliz, algo neutro, o no saber identificar bien qué es lo que sientes.
 
 No hay un método preciso para medir la felicidad científicamente, lo mejor que podemos hacer son reportes propios, preguntarnos a nosotros mismo.[^1]
 
@@ -67,24 +69,31 @@ La forma en la nos percibimos, como interpretamos nuestras experiencias y en los
 >
 > \- Sonja Lyubomirsky, The How of Happiness: A Scientific Approach to Getting the Life You Want
 
-### Problemas
+## Retos
 
-* Botón de feliz/sumar y botón de triste/restar.
-	La felicidad de ese día será el conteo de felicidad y se restarán por el conteo de tristeza.
-* Escala? Del 1-10??
+Uno de los retos principales del proyecto es pensar en la manera correcta de introducir tu estado en la app.
 
-## Todos:
-* Relacionar diseño y desarrollo de la app con filosofía de cozy software.
-* Relacionar con perduración de datos? registro de los recuerdos?
+Algunas de las opciones son:
+
+* Botón de feliz (suma) y botón de triste (resta).
+* Escala/rango del 1-10.
+* Emoticonos (por ejemplo 5) con caritas que representen los distintos estados.
+* Memes, la mejor forma para la generación z, identificarse con el meme de un gato, aunque esta me parece una idea genial el principal problema sería el copyright de las imágenes.
 
 ## Diario
 
-* `06/08/22`:
-	Primeros diseños y prototipo.
+### `06/08/22`
+Primeros diseños y prototipo.
 
-	![[thoughts/images/life-rhythm.png]]
-	![[thoughts/images/Pasted image 20220806233955.png|400]]
-	![[thoughts/images/Pasted image 20220806234022.png|400]]
+![[thoughts/images/life-rhythm.png]]
+![[thoughts/images/Pasted image 20220806233955.png|400]]
+![[thoughts/images/Pasted image 20220806234022.png|400]]
+
+## Pendiente:
+* Relacionar diseño y desarrollo de la app.
+* Relacionar con perduración de datos? registro de los recuerdos?
+* Actualizar diario
+* Lanzar versión 1.0 de la app
 
 [^1]: Fuente: [Estudio](https://positivepsychology.com/measure-happiness-tests-surveys)
 [^2]: Fuente: [YouTube](https://youtu.be/_7EqdyU_nGw)
