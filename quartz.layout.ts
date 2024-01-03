@@ -2,11 +2,11 @@ import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 import { SimpleSlug } from "./quartz/util/path"
 
-const recentNotes = Component.RecentNotes({
+export const recentNotes = Component.RecentNotes({
   title: 'Notas recientes',
-  limit: 3,
+  limit: 4,
   filter: (f) => f.slug!.startsWith('thoughts/') && f.slug! !== "posts/index" && !f.frontmatter?.noindex,
-  linkToMore: "thoughts/" as SimpleSlug
+  linkToMore: "tags/seed" as SimpleSlug
 })
 
 const tableOfContents = Component.TableOfContents({ layout: 'modern' })
@@ -19,6 +19,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       Twitter: "https://twitter.com/vicente015_",
       GitHub: "https://github.com/Vicente015",
+      Mastodon: 'https://mas.to/@vicente015'
     },
   }),
 }

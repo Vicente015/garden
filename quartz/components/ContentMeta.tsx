@@ -13,7 +13,8 @@ export default (() => {
         segments.push(formatDate(getDate(cfg, fileData)!))
       }
 
-      segments.push(timeTaken)
+      segments.push(`${timeTaken.replace('read', 'lectura')}`)
+      segments.push(`${_words} palabras`)
       return <p class={`content-meta ${displayClass ?? ""}`}>{segments.join(", ")}</p>
     } else {
       return null

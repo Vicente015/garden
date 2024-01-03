@@ -12,8 +12,8 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     theme: {
       typography: {
-        header: "DM Serif Text",
-        body: "Source Sans Pro",
+        header: "Amiamie",
+        body: "Inclusive Sans",
         code: "IBM Plex Mono",
       },
       colors: {
@@ -65,7 +65,7 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-      Plugin.TableOfContents(),
+      Plugin.TableOfContents({ collapseByDefault: true, minEntries: 4 }),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
@@ -79,13 +79,14 @@ const config: QuartzConfig = {
     filters: [Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
-      Plugin.ComponentResources({ fontOrigin: "googleFonts" }),
+      Plugin.ComponentResources({ fontOrigin: "local" }),
       Plugin.ContentPage(),
       Plugin.FolderPage(),
       Plugin.TagPage(),
       Plugin.ContentIndex({
         enableSiteMap: true,
-        enableRSS: true
+        enableRSS: true,
+        rssFullHtml: true
       }),
       Plugin.Assets(),
       Plugin.Static(),

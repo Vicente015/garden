@@ -7,7 +7,7 @@ import { wikilinkRegex } from "./ofm"
 
 export interface Options {
   maxDepth: 1 | 2 | 3 | 4 | 5 | 6
-  minEntries: 1
+  minEntries: number
   showByDefault: boolean
   collapseByDefault: boolean
 }

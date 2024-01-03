@@ -3,7 +3,6 @@ title: React
 date: 2023-09-14
 tags:
 - seed
-- reactCourse
 - learnings
 ---
 
@@ -15,7 +14,7 @@ El objetivo principal de React es minimizar los errores que ocurren cuando los d
 ## Abstracción
 La abstracción es un método que pretender simplificar un concepto para no tener que entender cómo funcionan los sistemas complejos por debajo.
 
-### Contenidos
+## Contenidos
 - Resumen sobre React, entendiendo conceptos.
 - Introducción a JSX
 - Componentes, props, estados, eventos
@@ -43,7 +42,7 @@ La abstracción es un método que pretender simplificar un concepto para no tene
 
 React es una biblioteca de código abierto creada por Meta/Facebook, se creó en 2011 como una forma de simplificar las interfaces de usuario, se creó porque era muy difícil trabajar con formularios.
 
-## Razones para aprender React
+### Razones para aprender React
 1. Framework más demandado en mundo occidental con mucha salida laboral.
 2. Los conceptos se pueden usar para desarrollar apps moviles con React Native.
 3. Mantenimiento asegurado, lleva una gran empresa y comunidad detrás.
@@ -75,6 +74,7 @@ Ejemplo de código usando JSX:
 - En React todo es un componente.
 - Es como un árbol, se inicia desde la base o root.
 - React prevee muy bien la inyección de código malicioso.
+todo: Incluir esto en el resto de cosas.
 
 ## Conceptos React
 
@@ -434,7 +434,7 @@ export function Filters () {
 ```
 
 ### `useReducer`
-Nos permite manejar el estaod de una manera escalable porque se basa en que recibe en una función el estado actual y la acción que tiene que hacer.
+Nos permite manejar el estado de una manera escalable y abstraer la lógica porque se basa en en una función que recibe el estado actual y la acción que tiene que hacer.
 
 todo: añadir ejemplos código
 ventajas:
@@ -474,7 +474,7 @@ function Counter() {
 }
 ```
 
-### Montado doble al iniciar usando `<React.StrictMode>`
+## Montado doble al iniciar usando `<React.StrictMode>`
 Al usar el componente `React.StrictMode` para envolver nuestra app en entorno de desarrollo este monta, desmonta y vuelve a montar los componentes para asegurarse de que no tienen fallos, es simplemente para depurar, no ocurre en producción.
 
 ```jsx
@@ -582,6 +582,41 @@ const debounce = (fn: Function, waitTime = 300) => {
 ![img](https://coffeebytes.dev/debounce-y-throttle-en-javascript/images/DebounceORebote.png)
 
 TODO: Sustituir imagen remota por dibujo local ;)
+
+---
+
+## Lazy Load en React
+
+React incluye una utilidad para realizar *lazy loading* o carga condicional, lo que nos permite que solo se cargue contenido cuando este sea estrictamente necesario, es decir que por ejemplos carguemos las imágenes al cargar directamente la página y no al entrar a la página principal.
+
+```jsx
+import AboutPage from './pages/About.jsx' // Import estático
+import('./pages/About.jsx') // Import dinámico
+```
+
+Cuando queremos cargar un componente de forma dinámica utilizamos el `lazy` con el `import` correspondiente dentro, al utilizar el lazy en nuestro código debemos de asegurarnos que los sitios donde se usa ese componente estén envueltos con un componente `Suspense` que indica que lo está dentro puede no estar disponible y por lo tanto nos permite poner una pantalla de carga en la transición de carga con el atributo de `fallback`.
+
+```jsx
+import { lazy, Suspense } from 'react'
+
+// Este componente no se va a cargar hasta que no se vaya a renderizar
+const AboutPage = lazy(() => import('./pages/About.jsx')
+
+function App () {
+  return (
+    <main>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Router routes={appRoutes} defaultComponent={Page404}>
+          <Route path='/about' Component={AboutPage} />
+        </Router>
+      </Suspense>
+    </main>
+  )
+}
+
+export default App
+```
+
 
 
 ---

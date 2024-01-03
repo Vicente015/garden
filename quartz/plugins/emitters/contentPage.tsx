@@ -1,12 +1,12 @@
 import { QuartzEmitterPlugin } from "../types"
-import { QuartzComponentProps } from "../../components/types"
+import { QuartzComponent, QuartzComponentProps } from "../../components/types"
 import HeaderConstructor from "../../components/Header"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { FullPageLayout } from "../../cfg"
 import { FilePath, pathToRoot } from "../../util/path"
-import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
-import { Content } from "../../components"
+import { defaultContentPageLayout, recentNotes, sharedPageComponents } from "../../../quartz.layout"
+import { Content, Darkmode, Main, RecentNotes } from "../../components"
 import chalk from "chalk"
 
 export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpts) => {
@@ -37,6 +37,8 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
         if (slug === "index") {
           containsIndex = true
         }
+        let isMain = file.data.filePath! === 'content/_index.md'
+        const optsMain = { ...opts, left: [], right: [recentNotes], footer: null, pageBody: Main() } as FullPageLayout
 
         const externalResources = pageResources(pathToRoot(slug), resources)
         const componentData: QuartzComponentProps = {
@@ -48,7 +50,7 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
           allFiles,
         }
 
-        const content = renderPage(slug, componentData, opts, externalResources)
+        const content = renderPage(slug, componentData, isMain ? optsMain : opts, externalResources)
         const fp = await emit({
           content,
           slug,

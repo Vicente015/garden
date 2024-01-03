@@ -39,3 +39,109 @@
  100% { transform: translateY(0) }
 }
 
+.main-intro {
+  display: flex;
+  display: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+
+  & img {
+    margin: 0;
+    height: 8em;
+    width: 8em;
+    border-radius: 100%;
+  }
+
+  & .main-text {
+    justify-content: center;
+    & * {
+      line-height: 1.25;
+      margin: 0;
+      padding: 0;
+    }
+
+    & p {
+      font-size: 1.8em;
+    }
+
+    & h1 {
+      font-size: 2.5em;
+    }
+  }
+}
+
+body[data-slug=index] {
+  .page-header {
+    margin-top: 3em;
+  }
+
+  .page > #quartz-body .sidebar {
+    position: initial;
+    width: initial;
+    flex-direction: row;
+    margin-top: 2rem;
+    padding: 0;
+    width: 100%;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > * {
+      flex: 1 !important;
+    }
+  }
+
+  .page>#quartz-body {
+    flex-direction: column;
+  }
+
+  .recent-ul {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+li.section-li>.section {
+  grid-template-columns: 7em 3fr 1fr !important;
+  gap: 1em;
+  & .meta {
+    text-align: right;
+  }
+}
+
+.tags {
+  flex-wrap: initial !important;
+}
+
+// Fuentes
+@font-face {
+  font-family: 'Amiamie';
+  src: local('Amiamie'), url('static/fonts/Amiamie-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Inclusive Sans';
+  src: local('Inclusive Sans'), url('static/fonts/InclusiveSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: local('IBM Plex Mono'), url('static/fonts/IBMPlexMono-Regular.ttf');
+}
+
+// Fuentes bold
+@font-face {
+  font-family: 'Amiamie';
+  src: local('Amiamie'), url('static/fonts/Amiamie-Black.woff2');
+  font-weight: bold;
+}
+
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: local('IBM Plex Mono'), url('static/fonts/IBMPlexMono-Bold.ttf');
+  font-weight: bold;
+}
+
