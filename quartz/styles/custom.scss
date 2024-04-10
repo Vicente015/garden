@@ -13,10 +13,7 @@
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
   filter:
-    drop-shadow(1px 1px 0 black)
-    drop-shadow(1px -1px 0 black)
-    drop-shadow(-1px 1px 0 black)
-    drop-shadow(-1px -1px 0 black)
+    drop-shadow(1px 1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(-1px -1px 0 black)
 }
 
 .tag-pixel-icon:hover {
@@ -24,19 +21,47 @@
 }
 
 @keyframes horizontal-shaking {
- 0% { transform: translateX(0) }
- 25% { transform: translateX(3px) }
- 50% { transform: translateX(-3px) }
- 75% { transform: translateX(3px) }
- 100% { transform: translateX(0) }
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(3px)
+  }
+
+  50% {
+    transform: translateX(-3px)
+  }
+
+  75% {
+    transform: translateX(3px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
 }
 
 @keyframes vertical-shaking {
- 0% { transform: translateY(0) }
- 25% { transform: translateY(-3px) }
- 50% { transform: translateY(-6px) }
- 75% { transform: translateY(-3px) }
- 100% { transform: translateY(0) }
+  0% {
+    transform: translateY(0)
+  }
+
+  25% {
+    transform: translateY(-3px)
+  }
+
+  50% {
+    transform: translateY(-6px)
+  }
+
+  75% {
+    transform: translateY(-3px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
 }
 
 .main-intro {
@@ -55,6 +80,7 @@
 
   & .main-text {
     justify-content: center;
+
     & * {
       line-height: 1.25;
       margin: 0;
@@ -76,7 +102,7 @@ body[data-slug=index] {
     margin-top: 3em;
   }
 
-  .page > #quartz-body .sidebar {
+  .page>#quartz-body .sidebar {
     position: initial;
     width: initial;
     flex-direction: row;
@@ -87,13 +113,14 @@ body[data-slug=index] {
     margin-left: auto;
     margin-right: auto;
 
-    & > * {
+    &>* {
       flex: 1 !important;
     }
   }
 
   .page>#quartz-body {
     flex-direction: column;
+    text-wrap: balance;
   }
 
   .recent-ul {
@@ -106,6 +133,7 @@ body[data-slug=index] {
 li.section-li>.section {
   grid-template-columns: 7em 3fr 1fr !important;
   gap: 1em;
+
   & .meta {
     text-align: right;
   }
@@ -144,4 +172,3 @@ li.section-li>.section {
   src: local('IBM Plex Mono'), url('static/fonts/IBMPlexMono-Bold.ttf');
   font-weight: bold;
 }
-

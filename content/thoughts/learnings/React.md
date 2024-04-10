@@ -42,17 +42,8 @@ La abstracción es un método que pretender simplificar un concepto para no tene
 
 React es una biblioteca de código abierto creada por Meta/Facebook, se creó en 2011 como una forma de simplificar las interfaces de usuario, se creó porque era muy difícil trabajar con formularios.
 
-### Razones para aprender React
-1. Framework más demandado en mundo occidental con mucha salida laboral.
-2. Los conceptos se pueden usar para desarrollar apps moviles con React Native.
-3. Mantenimiento asegurado, lleva una gran empresa y comunidad detrás.
-4. Aprender React te ayudará con el resto de frameworks, muchos de los conceptos se pueden aplicar al resto.
-5. Futuro prometedor.
-6. API estable, mantienen mucha de la sintaxis porque se centran en no romper algo anterior.
-7. Comunidad gigante y activa.
-
 ## Código imperativo
-Es una forma de escribir código declarando implicitamente cómo lo tiene que hacer.
+Es una forma de escribir código declarando implícitamente cómo lo tiene que hacer.
 
 Ejemplo de código usando librerías de React en HTML puro:
 ```js
@@ -69,12 +60,6 @@ Ejemplo de código usando JSX:
 	<button data-id="123">Button 1</button>
 </React.Fragment>
 ```
-
-## Apuntes 01
-- En React todo es un componente.
-- Es como un árbol, se inicia desde la base o root.
-- React prevee muy bien la inyección de código malicioso.
-todo: Incluir esto en el resto de cosas.
 
 ## Conceptos React
 
@@ -109,7 +94,6 @@ Un transpilador convierte JavaScript y lo transforma.
 Cuando usamos JSX tiene que pasar por un proceso de traspilación usando dichas herramientas para poder convertirlo a HTML/JS entendible por el navegador, cuando escribimos JSX no estamos escribiendo HTML directamente, estamos escribiendo JavaScript.
 
 Transpiladores conocidos:
-
 - Babel
 - SWC
 
@@ -148,7 +132,7 @@ root.render(
 ```
 
 ## Componentes
-Un componente es una función que devuelve un elemento.
+En React todo es un component, un componente es una función que devuelve un elemento.
 * Se escriben en **PascalCase** para que React diferencie y no  genere conflicto con elementos HTML, se declaran de forma imperativa, su nombre no indica lo que hace `createButton` sino más bien lo que mostrar `Button`.
 
 ```jsx
@@ -340,7 +324,7 @@ Una forma más sencilla, similar al `useMemo` pero solo para las funciones, por 
 const getMovies = useCallback(async () => {
 	let results = await getResults()
 	return results
-}, []])
+}, [])
 ```
 
 ### `useId`
@@ -436,13 +420,12 @@ export function Filters () {
 ### `useReducer`
 Nos permite manejar el estado de una manera escalable y abstraer la lógica porque se basa en en una función que recibe el estado actual y la acción que tiene que hacer.
 
-todo: añadir ejemplos código
-ventajas:
-
+Ventajas:
 - Fácil de testear.
 - Lógica separada.
 - Framework agnostic.
-- ...
+
+
 
 ## Custom Hooks
 Un «hook personalizado» es una función que empieza por `use` y que puede utilizar otros hooks. Son ideales para reutilizar lógica en diferentes componentes.
@@ -581,7 +564,6 @@ const debounce = (fn: Function, waitTime = 300) => {
 
 ![img](https://coffeebytes.dev/debounce-y-throttle-en-javascript/images/DebounceORebote.png)
 
-TODO: Sustituir imagen remota por dibujo local ;)
 
 ---
 
@@ -634,5 +616,4 @@ Una de las pruebas más comunes es fetching de datos.
 
 
 TODO:
-1. Explicar lógica de Children con null y aceder a Childrens del parent?, utilidad Children de React.
-2. Utilidad lazy/Suspense de React
+1. Explicar lógica de Children con null y acceder a Childrens del parent?, utilidad Children de React.
