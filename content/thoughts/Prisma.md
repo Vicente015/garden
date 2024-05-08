@@ -5,7 +5,6 @@ tags:
 date: '2021-01-09'
 ---
 
-# Prisma, SQLite y JavaScript
 Estuve aprendiendo [Prisma](https://prisma.io), implementado con sqlite y js.
 Esto es todo lo básico que aprendí, la documentación es demasiado extensa así que hice mis propios apuntes resumiéndolo, puede que añada más en un futuro si me interesa implementar esto en otros proyectos.
 

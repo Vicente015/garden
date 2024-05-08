@@ -9,7 +9,7 @@ const config: QuartzConfig = {
     analytics: null,
     baseUrl: "vicente015.dev",
     ignorePatterns: ["**/private", "**/templates", ".obsidian"],
-    defaultDateType: "modified",
+    defaultDateType: "created",
     theme: {
       typography: {
         header: "Amiamie",
@@ -67,7 +67,7 @@ const config: QuartzConfig = {
       Plugin.FrontMatter(),
       Plugin.TableOfContents({ collapseByDefault: true, minEntries: 4 }),
       Plugin.CreatedModifiedDate({
-        priority: ["git", "frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
+        priority: ["frontmatter", "git", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),

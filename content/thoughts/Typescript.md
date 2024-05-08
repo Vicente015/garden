@@ -5,11 +5,6 @@ tags:
 date: 2020-12-28
 ---
 
-# TypeScript
-
-Apuntes viejos que tomé mientras aprendía, necesita actualización.
-
-## Qué es TypeScript
 Es un superconjunto tipado e Javascript, que compila a Javascript.
 
 * Tipado, posee un conjunto de tipos para poder usarlos con las variables, pudiendo personalizarlos o extenderlos.

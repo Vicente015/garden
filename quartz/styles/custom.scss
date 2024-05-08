@@ -130,6 +130,20 @@ body[data-slug=index] {
   }
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: pretty;
+  text-wrap: balance;
+}
+
+h3>a {
+  text-wrap: pretty;
+  text-wrap: balance;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
 li.section-li>.section {
   grid-template-columns: 7em 3fr 1fr !important;
   gap: 1em;

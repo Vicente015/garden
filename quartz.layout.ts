@@ -17,9 +17,10 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
-      Twitter: "https://twitter.com/vicente015_",
       GitHub: "https://github.com/Vicente015",
-      Mastodon: 'https://mas.to/@vicente015'
+      Mastodon: 'https://mas.to/@vicente015',
+      Twitter: "https://twitter.com/vicente015_",
+      RSS: '/index.xml'
     },
   }),
 }

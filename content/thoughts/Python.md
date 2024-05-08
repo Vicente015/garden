@@ -5,8 +5,6 @@ tags:
 date: 2021-10-29
 ---
 
-# Apuntes de Python
-
 Estos son apuntes que he tomado mientras aprendía Python.
 
 ## Funciones importantes
