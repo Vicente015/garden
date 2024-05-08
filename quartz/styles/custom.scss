@@ -13,7 +13,9 @@
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
   filter:
-    drop-shadow(1px 1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(-1px -1px 0 black)
+    drop-shadow(1px 1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  cursor: url('static/watering_can_water-icon.png'), auto;
+
 }
 
 .tag-pixel-icon:hover {
