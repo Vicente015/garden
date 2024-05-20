@@ -38,7 +38,7 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
           containsIndex = true
         }
         let isMain = file.data.filePath! === 'content/_index.md'
-        const optsMain = { ...opts, left: [], right: [recentNotes], footer: null, pageBody: Main() } as FullPageLayout
+        const optsMain = { ...opts, left: [], right: [recentNotes], pageBody: Main() } as FullPageLayout
 
         const externalResources = pageResources(pathToRoot(slug), resources)
         const componentData: QuartzComponentProps = {
