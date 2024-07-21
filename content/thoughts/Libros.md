@@ -4,10 +4,11 @@ date: 2024-07-14
 tags:
   - seed
 ---
+
 ## Por leer
 ### Ficción
 - El Principito, Antoine Saint-Exupery
-- EL alquimista, Pablo
+- EL alquimista, Paulo Coelho
 
 ### No ficción
 - Una ética de la tierra, Aldo Leopold
