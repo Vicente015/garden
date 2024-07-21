@@ -2,7 +2,7 @@
 title: Lovely
 date: 2024-07-14
 tags:
-  - seed
+  - sapling
 ---
 Lovely es:
 - una app para escribir documentos de forma colaborativa [[Local-first software|local first (pensado para funcionar sin conexión)]]
