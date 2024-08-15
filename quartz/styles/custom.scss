@@ -66,6 +66,11 @@
   }
 }
 
+strong {
+  color: var(--dark) !important;
+  font-weight: 800;
+}
+
 .main-intro {
   display: flex;
   display: row;

@@ -6,7 +6,7 @@ export const recentNotes = Component.RecentNotes({
   title: 'Notas recientes',
   limit: 4,
   filter: (f) => f.slug!.startsWith('thoughts/') && f.slug! !== "posts/index" && !f.frontmatter?.noindex,
-  linkToMore: "tags/seed" as SimpleSlug
+  linkToMore: "thoughts/" as SimpleSlug
 })
 
 const tableOfContents = Component.TableOfContents({ layout: 'modern' })

@@ -15,7 +15,7 @@ echo "Hola mundo";
 ?>
 ```
 
-## Mezcla con [HTML](./HTML.md)
+## Mezcla con [HTML](thoughts/HTML.md)
 Podemos mezclar etiquetas de HTML con etiquetas de PHP y con ello hacer HTML condicional.
 
 ```php

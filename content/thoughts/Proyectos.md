@@ -31,7 +31,7 @@ Instatus.ts es una biblioteca para interactuar con la API de Instatus, una plata
 **Construido con:** TypeScript.
 
 ## Life Rhythm — Una app para medir tu felicidad
-[GitHub](https://github.com/Vicente015/life-rhythm-app), [[Ritmo de la vida|Diario]]
+[GitHub](https://github.com/Vicente015/life-rhythm-app), [[Ritmo de la vida|Nota]]
 
 "Life Rhythm" *(nombre no definitivo)* es una aplicación cuyo objetivo es medir y representar el ritmo de la vida y la felicidad de una persona. La aplicación se centra en parametrizar la felicidad y mostrarte un gráfico que puedes personalizar para centrarte en ver tu estado en 1 mes, 3 meses o un año.
 
@@ -54,7 +54,7 @@ Consulta las paradas de Guaguas de la ciudad de <abbr title="Las Palmas de Gran 
 **Construido con:** React, Astro, Fastify, TRPC, TypeScript.
 
 ## Lovely — Genera cartas encantadoras
-[GitHub](https://github.com/vicente015/lovely)
+[GitHub](https://github.com/vicente015/lovely), [[thoughts/Lovely|Nota]]
 
 Crea cartas o webs encantadoras y customizables a partir de un archivo [*Markdown*](https://es.wikipedia.org/wiki/Markdown) para enviarlas a tus seres queridos.
 
@@ -63,6 +63,6 @@ Crea cartas o webs encantadoras y customizables a partir de un archivo [*Markdow
 ## Buscador de libros — Busca libros en el Proyecto Gutenberg
 [GitHub](https://github.com/Vicente015/CursoReactMidu/tree/main), [Web](https://curso-react-01-buscador-libros.vercel.app/)
 
-Este proyecto lo realicé como práctica de React, es un buscador de libros interactivo para el [«Proyecto Gutenberg»](https://es.wikipedia.org/wiki/Proyecto_Gutenberg) usando la API de [«Gutendex»](https://gutendex.com/), enfocado en la usabilidad y la [[thoughts/T3chFest/Soy mayor, no idiota. La brecha digital y las claves del diseño inclusivo|accesibilidad]].
+Este proyecto lo realicé como práctica de React, es un buscador de libros interactivo para el [«Proyecto Gutenberg»](https://es.wikipedia.org/wiki/Proyecto_Gutenberg) usando la API de [«Gutendex»](https://gutendex.com/), enfocado en la usabilidad y la [[thoughts/Soy mayor, no idiota. La brecha digital y las claves del diseño inclusivo|accesibilidad]].
 
 **Construido con:** React, Ariakit, TailwindCSS, Vite.

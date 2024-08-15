@@ -1,5 +1,5 @@
 ---
-title: 'TypeScript'
+title: TypeScript
 tags:
   - seed
 date: 2020-12-28

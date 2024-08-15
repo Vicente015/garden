@@ -67,13 +67,14 @@ const config: QuartzConfig = {
       Plugin.FrontMatter(),
       Plugin.TableOfContents({ collapseByDefault: true, minEntries: 4 }),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "git", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
+        priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
       }),
       Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest", openLinksInNewTab: false }),
       Plugin.Latex({ renderEngine: "mathjax" }),
+      Plugin.HardLineBreaks(),
       Plugin.Description(),
     ],
     filters: [Plugin.RemoveDrafts()],
