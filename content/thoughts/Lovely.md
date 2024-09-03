@@ -7,7 +7,7 @@ tags:
 Lovely es:
 - una app para escribir documentos de forma colaborativa [[Local-first software|local first (pensado para funcionar sin conexión)]]
 - un medio para la investigación ya que permite anotar y citar entre documentos de una manera sencilla
-- un medio para publicar tu contenido fácilmente a Internet
+- un medio para publicar tu contenido fácilmente a [[thoughts/Internet|Internet]]
 
 Los documentos en Lovely podrán ser:
 - Privados, solo tú puedes leerlo y editarlo

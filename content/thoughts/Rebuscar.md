@@ -8,7 +8,7 @@ relacionado: [[thoughts/Inspiracion|inspiracion]]
 
 Desde pequeño siempre me ha encantado explorar y rebuscar entre cacharros, carpetas y cajas en casa de mi Abuela, no buscaba nada en específico, simplemente era muy gratificante encontrar algo interesante que contuviera para mí algo que con lo que jugar, algunas de las cosas que me fascinaba encontrar eran libros con pétalos de flores marchitados dentro porque siempre comprobaba si quedaba algo del olor de la flor, CDs con fotos o cassetes con fotos sin revelar de esa época; me encantaba mirar a través de ellos sobreponiendo la luz.
 
-A día de hoy, esta dinámica ha definido cómo me inspiro y consumo contenido en Internet.
+A día de hoy, esta dinámica ha definido cómo me inspiro y consumo contenido en [[thoughts/Internet|Internet]].
 
 Me gusta  pensar que cada persona está formada por pequeños pedacitos de otra, que cuando nos gusta mucho algo lo copiamos y moldeamos hasta hacerlo algo nuestro e incorporarlo.
 

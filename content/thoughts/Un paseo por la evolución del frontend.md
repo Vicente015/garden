@@ -20,7 +20,7 @@ tags:
 
 ### Fase 4
 - Vue
-- React
+- [[thoughts/React|React]]
 - Angular
 
 ### Fase 5

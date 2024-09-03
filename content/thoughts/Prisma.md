@@ -22,7 +22,7 @@ Prisma es un ORM moderno de código abierto.
 > Básicamente nos permite asignar esquemas de datos con tipos de datos y poder relacionarlos y concadenarlos entre ellos usando bases de datos basadas en SQL.
 
 Prisma consta de las siguientes partes:
-* Prisma Client, Genera consultas de tipado seguro para Node.js y TypeScript.
+* Prisma Client, Genera consultas de tipado seguro para Node.js y [[thoughts/Typescript|TypeScript]].
 * Prisma Migrate, Sistema de migración de bases de datos.
 * Prisma Studio, Interfaz para ver y editar tu base de datos.
   ![Prisma Studio Screenshot](https://i.imgur.com/aitqJZE.png)

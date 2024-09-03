@@ -3,7 +3,6 @@ title: Generar PDFs hermosos desde Markdown
 date: 2023-09-21
 tags:
   - seed
-  - tutorial
 ---
 
 Recientemente, en una búsqueda por mejores alternativas a las gigantescas plataformas de documentos basadas en la nube que me den mayor [[thoughts/Local-first software|control sobre mis datos y archivos]], descubrí  [*Deliverance*](https://github.com/pojntfx/deliverance): una herramienta para publicar documentos en varios formatos a partir de un archivo Markdown. Usa [*Pandoc*](https://pandoc.org/) un «conversor de documentos universal» con la plantilla [*Eisvogel*](https://github.com/Wandmalfarbe/pandoc-latex-template/) por debajo.
@@ -91,6 +90,4 @@ Las [opciones](https://github.com/Wandmalfarbe/pandoc-latex-template/tree/master
 
 ## Resultado
 
-![[Pasted image 20230921232014.png]]
-![[Pasted image 20230921232027.png]]
-![[Pasted image 20230921232042.png]]
+![[Pasted image 20230921232014.png]] ![[Pasted image 20230921232027.png]] ![[thoughts/images/Pasted image 20230921232042.png]]

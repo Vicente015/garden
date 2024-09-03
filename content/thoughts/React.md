@@ -24,8 +24,8 @@ La abstracción es un método que pretender simplificar un concepto para no tene
 - Estructuras de carpetas, enrutado
 - Enrutador desde cero
 - Contexto, estados globales
-- Typescript, buenas prácticas, Docker
-- Testing, testing end-to-end tdd, lazy loading, import dinámicos
+- [[thoughts/Typescript|Typescript]], buenas prácticas, Docker
+- [[thoughts/Testing|Testing]], testing end-to-end tdd, lazy loading, import dinámicos
 - React Query, custom hooks
 
 ### Recursos
@@ -91,7 +91,7 @@ Recordatorio: no serviría poner un `if` u otra estructura porque no es una expr
 
 ## Transpilador
 Un transpilador convierte JavaScript y lo transforma.
-Cuando usamos JSX tiene que pasar por un proceso de traspilación usando dichas herramientas para poder convertirlo a HTML/JS entendible por el navegador, cuando escribimos JSX no estamos escribiendo HTML directamente, estamos escribiendo JavaScript.
+Cuando usamos JSX tiene que pasar por un proceso de traspilación usando dichas herramientas para poder convertirlo a [[thoughts/HTML|HTML]]/JS entendible por el navegador, cuando escribimos JSX no estamos escribiendo HTML directamente, estamos escribiendo JavaScript.
 
 Transpiladores conocidos:
 - Babel

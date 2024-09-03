@@ -16,7 +16,7 @@ Confusión, frustración, humillación.
 
 Ciclo: necesitar usar un producto o servicio digital → no poder → la única forma de recibir ayuda es de forma digital.
 
-9 millones de personas mayores, el 40% no utiliza internet.
+9 millones de personas mayores, el 40% no utiliza [[thoughts/Internet|internet]].
 
 ### Motivos
 - Económica

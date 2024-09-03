@@ -6,4 +6,4 @@ tags:
 - learnings
 ---
 
-HTML (HyperText Markup Language)  es un lenguaje de marcas para crear páginas o documentos en internet.
+HTML (HyperText Markup Language)  es un lenguaje de marcas para crear páginas o documentos en [[thoughts/Internet|internet]].

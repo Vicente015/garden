@@ -85,9 +85,7 @@ Algunas de las opciones son:
 ### `06/08/22`
 Primeros diseños y prototipo.
 
-![[thoughts/images/life-rhythm.png]]
-![[thoughts/images/Pasted image 20220806233955.png|400]]
-![[thoughts/images/Pasted image 20220806234022.png|400]]
+![[thoughts/images/life-rhythm.png]] ![[thoughts/images/Pasted image 20220806233955.png]] ![[thoughts/images/Pasted image 20220806234022.png]]
 
 ## Pendiente:
 * Relacionar diseño y desarrollo de la app.

@@ -25,11 +25,11 @@ Ejemplo 2: Para seleccionar todos los elementos "precio" que estén dentro de un
 ## Expresiones
 
 | Expresión                                   | Descripción                                               |
-|---------------------------------------------|-----------------------------------------------------------|
+| ------------------------------------------- | --------------------------------------------------------- |
 | nombre_nodo                                 | Selecciona todos los nodos hijos del señalado             |
 | /                                           | Selecciona desde el nodo raíz                             |
 | //                                          | Selecciona los nodos en el documento que coincidan con el |
-| señalado sin importar dónde estén colocados |
+| señalado sin importar dónde estén colocados |                                                           |
 | .                                           | Selecciona el nodo actual                                 |
 | ..                                          | Selecciona el padre del nodo actual                       |
 | @                                           | Selecciona atributos                                      |
