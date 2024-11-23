@@ -17,8 +17,8 @@ return dv.markdownList(
 )
 ``` 
 %%
-- **[[thoughts/books/El PRINCIPITO.md|El Principito]]** por Antoine de Saint-Exupéry
-- **[[thoughts/books/El Alquimista.md|El Alquimista]]** por Paulo Coelho
+- **[[books/El PRINCIPITO|El Principito]]** por Antoine de Saint-Exupéry
+- **[[books/El Alquimista|El Alquimista]]** por Paulo Coelho
 
 %% run end %%
 
@@ -35,7 +35,7 @@ return dv.markdownList(
 )
 ``` 
 %%
-- **[[thoughts/books/Una ética de la Tierra.md|Una ética de la Tierra]]** por Aldo Leopold
+- **[[books/Una ética de la Tierra|Una ética de la Tierra]]** por Aldo Leopold
 
 %% run end %%
 
@@ -52,9 +52,9 @@ return dv.markdownList(
 )
 ``` 
 %%
-- **[[thoughts/books/The Boy Who Could Change the World.md|The Boy Who Could Change the World]]** por Aaron Swartz
-- **[[thoughts/books/Comer para no morir.md|Comer para no morir]]** por Gene Stone y Michael Greger
-- **[[thoughts/books/Código sostenible cómo programar código fácil de mantener.md|Código sostenible : cómo programar código fácil de mantener]]** por Carlos Blé Jurado
+- **[[books/The Boy Who Could Change the World|The Boy Who Could Change the World]]** por Aaron Swartz
+- **[[books/Comer para no morir|Comer para no morir]]** por Gene Stone y Michael Greger
+- **[[books/Código sostenible cómo programar código fácil de mantener|Código sostenible : cómo programar código fácil de mantener]]** por Carlos Blé Jurado
 
 %% run end %%
 
@@ -76,10 +76,10 @@ return dv.pages("#book")
 ``` 
 %%
 ### 2024
-- **[[thoughts/books/Un Mundo Feliz.md|Un Mundo Feliz]]** por Aldous Huxley
-- **[[thoughts/books/El marciano.md|El marciano]]** por Andy Weir
+- **[[books/Un Mundo Feliz|Un Mundo Feliz]]** por Aldous Huxley
+- **[[books/El marciano|El marciano]]** por Andy Weir
 
 ### 2022
-- **[[thoughts/books/1984.md|1984]]** por George Orwell
+- **[[books/1984|1984]]** por George Orwell
 
 %% run end %%

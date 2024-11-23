@@ -31,7 +31,7 @@ Instatus.ts es una biblioteca para interactuar con la API de Instatus, una plata
 **Construido con:** TypeScript.
 
 ## Life Rhythm — Una app para medir tu felicidad
-[GitHub](https://github.com/Vicente015/life-rhythm-app), [[Ritmo de la vida|Nota]]
+[GitHub](https://github.com/Vicente015/life-rhythm-app), [[thoughts/Ritmo de la vida|Nota]]
 
 "Life Rhythm" *(nombre no definitivo)* es una aplicación cuyo objetivo es medir y representar el ritmo de la vida y la felicidad de una persona. La aplicación se centra en parametrizar la felicidad y mostrarte un gráfico que puedes personalizar para centrarte en ver tu estado en 1 mes, 3 meses o un año.
 

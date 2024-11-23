@@ -7,7 +7,7 @@ tags:
 
 Recientemente, en una búsqueda por mejores alternativas a las gigantescas plataformas de documentos basadas en la nube que me den mayor [[thoughts/Local-first software|control sobre mis datos y archivos]], descubrí  [*Deliverance*](https://github.com/pojntfx/deliverance): una herramienta para publicar documentos en varios formatos a partir de un archivo Markdown. Usa [*Pandoc*](https://pandoc.org/) un «conversor de documentos universal» con la plantilla [*Eisvogel*](https://github.com/Wandmalfarbe/pandoc-latex-template/) por debajo.
 
-![[Pasted image 20230921214116.png]]
+![[thoughts/images/Pasted image 20230921214116.png]]
 _Muestra de cómo se ve un archivo generado por dicha herramienta._
 
 > ¿A quién no le gustaría ser dueño de sus documentos y poder generar uno bonito, profesional, con soporte a bloques de código y tan solo centrarse en escribir?
@@ -15,7 +15,7 @@ _Muestra de cómo se ve un archivo generado por dicha herramienta._
 Lamentablemente no conseguí que me funcionara debido a que necesitas instalar `pandoc`, que resulta sencillo hasta que empieza a dar errores por compatibilidad con funciones o fuentes que también tienes que instalar aparte.
 
 La solución es instalar un grupo de paquetes que contienen la mayoría de extensiones/paquetes (`texlive-full`), el problema es que requiere un montón de paquetes y pesan demasiado ¿casi **3GB** para hacer bonito un PDF? 😢
-![[Pasted image 20230921213423.png]]
+![[thoughts/images/Pasted image 20230921213423.png]]
 
 ## Usando contenedores
 Como yo tan solo necesitaba generar un PDF y no todas las características que incluye la herramienta así que decidí usar las herramientas por separado.
@@ -90,4 +90,4 @@ Las [opciones](https://github.com/Wandmalfarbe/pandoc-latex-template/tree/master
 
 ## Resultado
 
-![[Pasted image 20230921232014.png]] ![[Pasted image 20230921232027.png]] ![[thoughts/images/Pasted image 20230921232042.png]]
+![[thoughts/images/Pasted image 20230921232014.png]] ![[thoughts/images/Pasted image 20230921232027.png]] ![[thoughts/images/Pasted image 20230921232042.png]]

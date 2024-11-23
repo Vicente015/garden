@@ -5,7 +5,7 @@ tags:
   - sapling
 ---
 Lovely es:
-- una app para escribir documentos de forma colaborativa [[Local-first software|local first (pensado para funcionar sin conexión)]]
+- una app para escribir documentos de forma colaborativa [[thoughts/Local-first software|local first (pensado para funcionar sin conexión)]]
 - un medio para la investigación ya que permite anotar y citar entre documentos de una manera sencilla
 - un medio para publicar tu contenido fácilmente a [[thoughts/Internet|Internet]]
 
