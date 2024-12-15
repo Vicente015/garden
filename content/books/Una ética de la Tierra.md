@@ -19,6 +19,7 @@ published: 2019-12-19
 tags:
   - book
   - unread
+cover_y: 0.5
 ---
 %% run start
 ```ts

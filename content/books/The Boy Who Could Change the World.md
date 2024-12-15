@@ -18,7 +18,8 @@ published: 2016-01-05
 created: 2024-08-08 23:14:41
 tags:
   - book
-  - reading
+  - read
+last: 2024-11-29
 ---
 %% run start
 ```ts
