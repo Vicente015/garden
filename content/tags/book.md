@@ -1,5 +1,6 @@
 ---
 title: "Mi biblioteca 📚"
+obsidianUIMode: preview
 ---
 
 ## Por leer
@@ -17,8 +18,8 @@ return dv.markdownList(
 )
 ``` 
 %%
-- **[[books/El Alquimista.md|El Alquimista]]** por Paulo Coelho
 - **[[books/El PRINCIPITO.md|El Principito]]** por Antoine de Saint-Exupéry
+- **[[books/El Alquimista.md|El Alquimista]]** por Paulo Coelho
 
 %% run end %%
 
@@ -36,8 +37,9 @@ return dv.markdownList(
 ``` 
 %%
 - **[[books/Una ética de la Tierra.md|Una ética de la Tierra]]** por Aldo Leopold
-- **[[books/Código sostenible cómo programar código fácil de mantener.md|Código sostenible : cómo programar código fácil de mantener]]** por Carlos Blé Jurado
 - **[[books/Comunicación no violenta.md|Comunicación no violenta]]** por Marshall Rosenberg
+- **[[books/Código sostenible.md|Código sostenible]]** por Carlos Blé Jurado
+- **[[books/Al oeste con la noche.md|Al oeste con la noche]]** por Beryl Markham
 
 %% run end %%
 
@@ -55,7 +57,6 @@ return dv.markdownList(
 ``` 
 %%
 - **[[books/Comer para no morir.md|Comer para no morir]]** por Gene Stone y Michael Greger
-- **[[books/El accidente de Lauren Marsh.md|El accidente de Lauren Marsh]]** por Guillem Morales
 
 %% run end %%
 
@@ -77,9 +78,11 @@ return dv.pages("#book")
 ``` 
 %%
 ### 2024
+- **[[books/El accidente de Lauren Marsh.md|El accidente de Lauren Marsh]]** por Guillem Morales
+- **[[books/Busy Doing Nothing.md|Busy Doing Nothing]]** por Rekka Bellum y Devine Lu Linvega
 - **[[books/Un Mundo Feliz.md|Un Mundo Feliz]]** por Aldous Huxley
-- **[[books/El marciano.md|El marciano]]** por Andy Weir
 - **[[books/The Boy Who Could Change the World.md|The Boy Who Could Change the World]]** por Aaron Swartz
+- **[[books/El marciano.md|El marciano]]** por Andy Weir
 
 ### 2022
 - **[[books/1984.md|1984]]** por George Orwell

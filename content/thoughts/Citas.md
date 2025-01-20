@@ -27,3 +27,17 @@ No bebas. No fumes. No tosas. No respires.
 Y descansar: morir.
 >
 > ― Gabriel Celaya
+
+
+> Caminante, son tus huellas  
+> el camino y nada más;  
+> caminante, no hay camino,  
+> se hace camino al andar.
+> 
+> Al andar se hace camino  
+> y al volver la vista atrás  
+> se ve la senda que nunca  
+> se ha de volver a pisar.
+> 
+> ― [Antonio Machado](https://www.poetasandaluces.com/poema/3268/)
+

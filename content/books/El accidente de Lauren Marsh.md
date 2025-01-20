@@ -20,11 +20,10 @@ rating:
 topics: 
 published:
   "{ publishDate }": 
-created:
-  "{ DATE:YYYY-MM-DD HH:mm:ss }": 
 tags:
   - book
-  - reading
+  - read
+last: 2024-12-25
 ---
 
 %% run start
