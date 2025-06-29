@@ -20,6 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          submodules: 'recursive'
           fetch-depth: 0 # Fetch all history for git info
       - uses: actions/setup-node@v4
         with:
@@ -29,7 +30,7 @@ jobs:
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
