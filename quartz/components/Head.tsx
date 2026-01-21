@@ -31,7 +31,7 @@ export default (() => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-        <link rel="micropub" href="https://turnip.vicente015.dev/micropub"/>
+        <link rel="micropub" href="https://turnip.vicente015.dev/micropub">
         <link rel="authorization_endpoint" href="https://turnip.vicente015.dev/auth">
         <link rel="token_endpoint" href="https://turnip.vicente015.dev/auth/token">
         <link rel="indieauth-metadata" href="https://turnip.vicente015.dev/.well-known/oauth-authorization-server">
